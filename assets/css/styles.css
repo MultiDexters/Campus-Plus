@@ -931,14 +931,25 @@ a {
 
 .course-card .card-title {
     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
     margin-block: 15px 8px;
     font-size: 1.1em;
     transition: color 0.3s;
     color: #000;
 }
+
 
 .course-card .card-title:is(:hover, :focus) {
     color: hsl(210, 100%, 50%);
@@ -1734,9 +1745,13 @@ a {
 }
 
 @media (max-width:1199px) {
+    .ct-footer-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .ct-footer-list>li {
-        display: inline-block;
-        float: left
+        flex: 1 1 auto;
     }
 }
 
@@ -2013,11 +2028,12 @@ address a:hover {
 
 .ct-section_header--type2 img {
     display: inline-block;
-    float: left;
+    vertical-align: middle;
     position: relative;
     top: 15px;
-    padding-right: 3px
+    padding-right: 3px;
 }
+
 
 .ct-section_header--type3 {
     text-align: center;
