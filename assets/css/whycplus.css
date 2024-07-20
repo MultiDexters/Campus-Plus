@@ -1,0 +1,74 @@
+.whycplus-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.whycplus-container {
+    display: flex;
+    max-width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.phone-frame {
+    position: relative;
+    width: 80%;
+    border-radius: 16px;
+    padding: 100px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-right: -5%;
+}
+
+.access-mode {
+    margin-top: 20px;
+}
+
+.text-section {
+    padding: 0px;
+    max-width: 40%;
+    margin-top: 8%;
+    margin-right: 6%;
+    font-family: cursive;
+}
+
+.text-section h1 {
+    font-size: 50px;
+    color: #333;
+}
+
+.text-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+.text-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.text-section hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}

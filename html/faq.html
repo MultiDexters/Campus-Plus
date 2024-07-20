@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc, #6a11cb, #2575fc);
+            background-size: 300% 300%;
+            animation: gradientBG 6s ease infinite;
+            color: #fff;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .faq-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px 0;
+            overflow: hidden;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            position: relative;
+            padding-right: 25px;
+            font-weight: bold;
+            color: #fff;
+            transition: color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .faq-question:hover {
+            color: #ffdd57;
+        }
+
+        .faq-question:after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 1.5rem;
+            transition: transform 0.3s, content 0.3s;
+        }
+
+        .faq-item.open .faq-question:after {
+            content: '-';
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 20px;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">What is your return policy?</div>
+            <div class="faq-answer">
+                <p>We offer a 30-day return policy. If you are not satisfied with your purchase, you can return it
+                    within 30 days for a full refund.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How long does shipping take?</div>
+            <div class="faq-answer">
+                <p>Shipping times vary depending on your location. Typically, it takes 3-5 business days for domestic
+                    shipping and 7-14 business days for international shipping.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you offer customer support?</div>
+            <div class="faq-answer">
+                <p>Yes, we offer 24/7 customer support. You can contact us via email, phone, or live chat at any time.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I track my order?</div>
+            <div class="faq-answer">
+                <p>Yes, once your order has been shipped, you will receive a tracking number via email. You can use this
+                    number to track your order on our website.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentNode;
+                parent.classList.toggle('open');
+
+                const answer = parent.querySelector('.faq-answer');
+                if (parent.classList.contains('open')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = '0';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

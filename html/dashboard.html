@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+
+    <title>Dashboard | Campus +</title>
+</head>
+
+<body>
+
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="index1.html" class="nav__logo" style="font-size: 24px;">
+                    <i class="ri-code-s-slash-line">&nbsp;</i> Campus +
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__toggle-menu"></i>
+                    <i class="ri-close-line nav__toggle-close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="#" class="nav__link">Past Papers</a>
+                    </li>
+
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-flashlight-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Most viewed courses</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">HTML for beginners</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Advanced CSS</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">JavaScript OOP</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-heart-3-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Popular courses</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Development with Flutter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Web development with React</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Backend development expert</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-book-mark-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Careers</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Web development</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Applications development</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">UI/UX design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Informatic security</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-file-paper-2-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Certifications</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Course certificates</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Free certifications</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <li class="dropdown__item">
+                        <div class="nav__link dropdown__button">
+                            Blogs <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-code-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Web templates</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Free templates</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Premium templates</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-pen-nib-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Designs</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Web designs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">App designs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Component design</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-apps-2-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Others</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="#" class="dropdown__link">Recent blogs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Tutorial videos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown__link">Webinar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav__link">Forums</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav__link">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- </div> -->
+
+            <div class="nav__actions">
+                <i class="ri-notification-3-line nav__icon"></i>
+                <i class="ri-settings-3-line nav__icon"></i>
+                <i class="ri-account-circle-line nav__icon"></i>
+
+            </div>
+        </nav>
+    </header>
+
+    <script src="../assets/js/main.js"></script>
+
+
+    <!--=============== MAIN SECTION ===============-->
+    <div class="content">
+        <div class="content-container">
+            <div class="text">
+                <h1 style="color: rgb(0, 0, 0); font-size: 43px;">Empower your University Journey with Campus +</h1>
+                <p style="color: rgb(58, 60, 106);">
+                    Enhance learning with an advanced LMS featuring robust
+                    tools like Past Papers, Teachers info, Chatting Forums, GPA Calculators, and everything you need for
+                    seamless university life.</p>
+
+                <a href="#" class="learn-more-btn">Explore Now
+                    <i style="margin-top: 10px; margin-left: 4px;" class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+            <div class="image">
+                <img src="../assets/images/test1.jpg" alt="Placeholder Image">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--=============== NEW PAST PAPERS SECTION ===============-->
+    <div class="pastpapers-section">
+        <h1>Past <span>Papers</span></h1>
+        <div class="pp-container">
+            <div class="pp-item">
+                <div class="pp-badge">Easy</div>
+                <h2>Operating Systems (OS)</h2>
+                <p>This is a paragraph for item 1. This is a paragraph for item 1. This is a paragraph for item 1. This
+                    is a paragraph for item 1.</p>
+                <div class="pp-rating">
+                    <span>★★★★★</span>
+                    <span>5/5</span>
+                </div>
+                <div class="pp-info">
+                    <a class="pp-info-btn" href="#">View Teachers</a>
+                </div>
+            </div>
+            <div class="pp-item">
+                <div class="pp-badge">Medium</div>
+                <h2>Design & Analysis of Algorithms (DAA)</h2>
+                <p>This is a paragraph for item 2. This is a paragraph for item 2. This is a paragraph for item 2. This
+                    is a paragraph for item 2.</p>
+                <div class="pp-rating">
+                    <span>★★★★☆</span>
+                    <span>4.2/5</span>
+                </div>
+                <div class="pp-info">
+                    <a class="pp-info-btn" href="#">View Teachers</a>
+                </div>
+            </div>
+            <div class="pp-item">
+                <div class="pp-badge">Hard</div>
+                <h2>Data Structures (DS)</h2>
+                <p>This is a paragraph for item 3. This is a paragraph for item 3. This is a paragraph for item 3. This
+                    is a paragraph for item 3.</p>
+                <div class="pp-rating">
+                    <span>★★★☆☆</span>
+                    <span>3.9/5</span>
+                </div>
+                <div class="pp-info">
+                    <a class="pp-info-btn" href="#">View Teachers</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pastpapers-button">
+            <a class="pp-btn" href="#">See All</a>
+        </div>
+    </div>
+
+
+
+    <!--=============== Youtube Playlists ===============-->
+    <section class="section course" id="courses" aria-label="course">
+        <div class="container">
+            <p class="section-subtitle">Popular Courses</p>
+            <h2 class="h2 section-title">Pick A Course To Get Started</h2>
+            <ul class="grid-list">
+                <li>
+                    <div class="course-card">
+                        <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                            <img src="../assets/images/course-1.jpg" width="370" height="220" loading="lazy"
+                                alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
+                        </figure>
+                        <div class="abs-badge">
+                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">3 Weeks</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="badge">Beginner</span>
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Build Responsive Real- World Websites with HTML and
+                                    CSS</a>
+                            </h3>
+                            <div class="wrapper">
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+
+                                </div>
+                                <p class="rating-text">(5.0/7 Rating)</p>
+                            </div>
+                            <data class="price" value="29">FREE</data>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">8 Lessons</span>
+                                </li>
+                                <li class="card-meta-item">
+                                    <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">20 Students</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="course-card">
+                        <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                            <img src="../assets/images/course-2.jpg" width="370" height="220" loading="lazy"
+                                alt="Java Programming Masterclass for Software Developers" class="img-cover">
+                        </figure>
+                        <div class="abs-badge">
+                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">8 Weeks</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="badge">Advanced</span>
+                            <h3 class="h3">
+                                <a href="#" class="card-title">Java Programming Masterclass for Software Developers</a>
+                            </h3>
+                            <div class="wrapper">
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                                <p class="rating-text">(4.5 /9 Rating)</p>
+                            </div>
+                            <data class="price" value="49">FREE</data>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">15 Lessons</span>
+                                </li>
+                                <li class="card-meta-item">
+                                    <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">35 Students</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="course-card">
+                        <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
+                            <img src="../assets/images/course-3.jpg" width="370" height="220" loading="lazy"
+                                alt="The Complete Camtasia Course for Content Creators" class="img-cover">
+                        </figure>
+                        <div class="abs-badge">
+                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">3 Weeks</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="badge">Intermediate</span>
+                            <h3 class="h3">
+                                <a href="#" class="card-title">The Complete Camtasia Course for Content Creators</a>
+                            </h3>
+                            <div class="wrapper">
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                                <p class="rating-text">(4.9 /7 Rating)</p>
+                            </div>
+                            <data class="price" value="35">FREE</data>
+                            <ul class="card-meta-list">
+                                <li class="card-meta-item">
+                                    <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">13 Lessons</span>
+                                </li>
+                                <li class="card-meta-item">
+                                    <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                    <span class="span">18 Students</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <a href="#" class="btn-has-before">
+                <span class="span">Browse more courses</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+        </div>
+    </section>
+
+
+    <h1 style="margin: 5% auto 0 auto; text-align: center; font-size: 40px;color: black;">Calculators</h1>
+    <p style="margin: 1% auto 0 auto; text-align: center;font-size: 20px; color: gray;">Click Explore Now to be
+        Redirected</p>
+    <section class="cal-big-section">
+        <div class="calculator">
+            <h1>SGPA Calculator</h1>
+            <div class="calc-buttons">
+                <h2 class="value"></h2>
+                <span class="clear">Clear</span>
+                <span>/</span>
+                <span>*</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>-</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span class="plus">+</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>0</span>
+                <span>=</span>
+                <span class="equal">Explore Now</span>
+            </div>
+        </div>
+
+
+        <div class="calculator">
+            <h1>CGPA Calculator</h1>
+            <div class="calc-buttons">
+                <h2 class="value"></h2>
+                <span class="clear">Clear</span>
+                <span>/</span>
+                <span>*</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>-</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span class="plus">+</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>0</span>
+                <span>=</span>
+                <span class="equal">Explore Now</span>
+            </div>
+        </div>
+    </section>
+    <script src="../assets/js/dashboard.js"></script>
+
+
+
+
+    <section class="timetable-generator-section">
+        <h1>TimeTable Generator!</h1>
+        <h2>Version 1.0 - Fall 2024</h2>
+        <div class="course-container">
+            <div class="course-item">
+                <label for="course1">Course 1</label>
+                <select id="course1">
+                    <option value="">Please Select a Course.</option>
+                    <option value="course1">Course 1</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="course-item">
+                <label for="course2">Course 2</label>
+                <select id="course2">
+                    <option value="">Please Select a Course.</option>
+                    <option value="course2">Course 2</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="course-item">
+                <label for="course3">Course 3</label>
+                <select id="course3">
+                    <option value="">Please Select a Course.</option>
+                    <option value="course3">Course 3</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="course-item">
+                <label for="course4">Course 4</label>
+                <select id="course4">
+                    <option value="">Please Select a Course.</option>
+                    <option value="course4">Course 4</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="course-item">
+                <label for="course5">Course 5</label>
+                <select id="course5">
+                    <option value="">Please Select a Course.</option>
+                    <option value="course5">Course 5</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        </div>
+        <div class="tt-button-container">
+            <button class="tt-redirect-button" onclick="window.location.href='timetable.html'">Generate
+                Timetable</button>
+        </div>
+    </section>
+
+
+
+
+    <!--=============== ICONS ===============-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

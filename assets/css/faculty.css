@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.938rem;
+    background-color: #f0f8ff;
+    color: hsl(220, 12%, 45%);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.4);
+    background-color: hsl(220, 100%, 99%);
+    z-index: 100;
+    height: 12%;
+}
+
+/*=============== NAV ===============*/
+.nav {
+    height: 1.5rem;
+    align-items: center;
+    width: 90%;
+}
+
+.signup-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.signup-button:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+.signup-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.login-button {
+    background-color: #000;
+    color: white;
+    padding: 0.8rem 1.3rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(108, 117, 125, 0.1);
+    margin: 0.5rem;
+}
+
+.login-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.login-button:active {
+    background-color: #494f54;
+    transform: translateY(0);
+}
+
+.login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(108, 117, 125, 0.5);
+}
+
+.nav__data {
+    /*logo*/
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.nav__menu {
+    margin-left: -22%;
+}
+
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    color: hsl(220, 48%, 28%);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav__logo i {
+    font-size: 1.25rem;
+}
+
+.nav__logo:hover {
+    color: hsl(220, 68%, 54%);
+}
+
+.nav__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav__toggle-menu,
+.nav__toggle-close {
+    font-size: 1.25rem;
+    color: hsl(220, 48%, 28%);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav__toggle-close {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1118px) {
+    .nav__menu {
+        background-color: hsl(220, 100%, 99%);
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        padding-block: 1.5rem 4rem;
+        pointer-events: none;
+        opacity: 0;
+        transition: top 0.4s, opacity 0.3s;
+    }
+
+    .nav__menu::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    .nav__menu::-webkit-scrollbar-thumb {
+        background-color: hsl(220, 12%, 70%);
+    }
+}
+
+.nav__link {
+    color: hsl(220, 48%, 28%);
+    font-weight: 600;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.nav__link:hover {
+    background-color: hsl(220, 68%, 97%);
+}
+
+/* Show menu */
+.show-menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__toggle-menu {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .nav__toggle-close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__button {
+    cursor: pointer;
+}
+
+.dropdown__arrow {
+    font-size: 1.5rem;
+    font-weight: initial;
+    transition: transform 0.4s;
+}
+
+.dropdown__content,
+.dropdown__group,
+.dropdown__list {
+    display: grid;
+}
+
+.dropdown__container {
+    background-color: hsl(220, 68%, 97%);
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.dropdown__content {
+    row-gap: 1.25rem;
+}
+
+.dropdown__group {
+    padding-left: 2rem;
+    row-gap: 0.5rem;
+}
+
+.dropdown__group:first-child {
+    margin-top: 1.25rem;
+}
+
+.dropdown__group:last-child {
+    margin-bottom: 1.25rem;
+}
+
+.dropdown__icon i {
+    font-size: 1.25rem;
+    color: hsl(220, 68%, 54%);
+}
+
+.dropdown__title {
+    font-size: 0.813rem;
+    font-weight: 600;
+    color: hsl(220, 48%, 28%);
+}
+
+.dropdown__list {
+    row-gap: 0.25rem;
+}
+
+.dropdown__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(220, 12%, 45%);
+    transition: color 0.3s;
+}
+
+.dropdown__link:hover {
+    color: hsl(220, 48%, 28%);
+}
+
+/* Rotate dropdown icon */
+.show-dropdown .dropdown__arrow {
+    transform: rotate(180deg);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 300px) {
+    .dropdown__group {
+        padding-left: 1.5rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+
+    /* Nav */
+    .nav {
+        height: calc(3.5rem + 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+        column-gap: 2.5rem;
+        height: 100%;
+        font-size: 15px;
+        margin-left: -10%;
+    }
+
+    .nav li {
+        display: flex;
+    }
+
+    .nav__link {
+        padding: 0;
+    }
+
+    .nav__link:hover {
+        background-color: initial;
+    }
+
+    /* Dropdown */
+    .dropdown__button {
+        column-gap: 0.25rem;
+        pointer-events: none;
+    }
+
+    .dropdown__container {
+        height: max-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 6.5rem;
+        background-color: hsl(220, 100%, 99%);
+        box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
+        pointer-events: none;
+        opacity: 0;
+        transition: top 0.4s, opacity 0.3s;
+    }
+
+    .dropdown__content {
+        grid-template-columns: repeat(4, max-content);
+        column-gap: 6rem;
+        max-width: 1120px;
+        margin-inline: auto;
+    }
+
+    .dropdown__group {
+        padding: 4rem 0;
+        align-content: baseline;
+        row-gap: 1.25rem;
+    }
+
+    .dropdown__group:first-child,
+    .dropdown__group:last-child {
+        margin: 0;
+    }
+
+    .dropdown__list {
+        row-gap: 0.75rem;
+    }
+
+    .dropdown__icon {
+        width: 60px;
+        height: 60px;
+        background-color: hsl(220, 68%, 97%);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .dropdown__icon i {
+        font-size: 2rem;
+    }
+
+    .dropdown__title {
+        font-size: 0.938rem;
+    }
+
+    .dropdown__link {
+        font-size: 0.813rem;
+    }
+
+    .dropdown__link:hover {
+        color: hsl(220, 68%, 54%);
+    }
+
+    .dropdown__item {
+        cursor: pointer;
+    }
+
+    .dropdown__item:hover .dropdown__arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown__item:hover>.dropdown__container {
+        top: 5.5rem;
+        opacity: 1;
+        pointer-events: initial;
+        cursor: initial;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .container {
+        margin-inline: auto;
+    }
+}
+
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: hsl(220, 100%, 99%);
+        box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
+        width: 100%;
+        padding-block: 4.5rem 4rem;
+        transition: top 0.4s;
+
+    }
+}
+
+
+
+
+
+/* Schools Container */
+.schools-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 120px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.school-box {
+    background-color: #1e3d59;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.school-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Faculty Container */
+.faculty-container {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.faculty-container h1 {
+    text-align: left;
+    color: #004494;
+    margin-left: 2%;
+    margin-bottom: 3%;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.faculty-container h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 95%;
+    height: 4px;
+    background-color: #004494;
+}
+
+.faculty-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.faculty-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 22%;
+    max-width: 22%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faculty-card img {
+    width: 60%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.faculty-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.faculty-card p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.faculty-card .contact-info {
+    color: #1e3d59;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* Add this to your existing CSS file */
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}

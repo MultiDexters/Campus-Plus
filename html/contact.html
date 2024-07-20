@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <script>
+        (function () {
+            emailjs.init("jg7Is29lCuKpAdZxd"); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="contact_us_8">
+        <div class="responsive-container-block container">
+            <form id="contact-form" class="form-box"> <!-- Updated action attribute -->
+                <div class="container-block form-wrapper">
+                    <div class="responsive-container-block">
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12" id="i10mt-9">
+                            <input class="input" id="ijowk-9" name="name" placeholder="Full Name" required>
+                            <!-- Added name attribute -->
+                        </div>
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12" id="ieakm">
+                            <input class="input" id="indfi-7" name="email" placeholder="Email" required>
+                            <!-- Added name attribute -->
+                        </div>
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12" id="iajvf">
+                            <input class="input" id="ipmgh-9" name="phone" placeholder="Phone Number">
+                            <!-- Added name attribute -->
+                        </div>
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12" id="i634i-9">
+                            <textarea aria-placeholder="What’s on your mind?" class="textinput" id="i5vyy-9"
+                                name="message" rows="4" placeholder="What’s on your mind?" required></textarea>
+                            <!-- Added name attribute -->
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12 checkbox-container"
+                        id="i634i-2-2">
+                        <div class="checkboc-container">
+                            <input id="i0m1w" type="checkbox">
+                            <p class="checkbox-text" id="i5ywz">
+                                Turpis blandit massa interdum quam amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-8 wk-ipadp-12" id="i0txn-2">
+                        <button type="submit" class="submit-btn">
+                            Submit
+                        </button>
+                    </div>
+                    <div class="right-side-text">
+                        <p class="text-blk contactus-head">
+                            Get in Touch
+                        </p>
+                        <p class="text-blk contactus-subhead">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien.
+                        </p>
+                        <div class="social-media-links">
+                            <a href="#" id="ix94i-2-3">
+                                <img class="link-img"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                            </a>
+                            <a href="#">
+                                <img class="link-img"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                            </a>
+                            <a href="#">
+                                <img class="link-img"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                            </a>
+                            <a href="#" id="izldf-2-3">
+                                <img class="link-img"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log('Name:', this.elements['name'].value);
+            console.log('Email:', this.elements['email'].value);
+            emailjs.sendForm('service_mj3k7tm', 'template_3yduvdn', this)
+                .then(() => {
+                    alert('Sent!');
+                }, (err) => {
+                    alert(JSON.stringify(err));
+                });
+        });
+    </script>
+</body>
+
+</html>

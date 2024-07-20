@@ -1,0 +1,135 @@
+.newsandevents {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left {
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    border-right: 2px solid #e6e6e6;
+    margin-right: 1.5%;
+
+}
+
+.left-section {
+    margin-bottom: 20px;
+}
+
+.left-section .news-item {
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.left-section h2 {
+    color: #b31b1b;
+    font-size: 24px;
+    margin-bottom: 8%;
+}
+
+.left-section-1 {
+    width: 50%;
+    height: 60%;
+    margin-top: 4.8%;
+    margin-left: 1%;
+}
+
+.left-news-item {
+    position: relative;
+    /* Ensures that the pseudo-element is positioned relative to the parent element */
+    margin-bottom: 2%;
+}
+
+.left-news-item::after {
+    content: '';
+    position: absolute;
+    top: 108%;
+    left: 5%;
+    width: 85%;
+    height: 1.5px;
+    background-color: #e6e6e6;
+}
+
+.left-news-item h3 {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #b31b1b;
+}
+
+.left-news-item p {
+    margin-left: 10px;
+}
+
+
+.right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.right-section-2 {
+    margin-bottom: 420px;
+}
+
+.right-section-1 h2 {
+    color: #b31b1b;
+    font-size: 24px;
+    margin-bottom: 8%;
+}
+
+.right-section-2 h2 {
+    color: #b31b1b;
+    font-size: 24px;
+    margin-bottom: 8%;
+}
+
+.news-item,
+.event-item {
+    margin-bottom: 20px;
+}
+
+.news-item h3,
+.event-item h3 {
+    font-size: 16px;
+    color: #b31b1b;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.news-item p,
+.event-item p {
+    margin: 0;
+}
+
+
+.more-link {
+    color: #b31b1b;
+    text-decoration: none;
+}
+
+.top-image {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 600px;
+}
+
+.left-image-1 {
+    width: 320px;
+    height: 150px;
+    margin-left: 4%;
+    margin-top: 13.1%;
+}
+
+.divider {
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
