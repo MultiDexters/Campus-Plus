@@ -500,10 +500,11 @@ a {
 }
 
 .faculty-card img {
-    width: 60%;
+    width: 35%;
     height: auto;
     margin: 10px auto;
     display: block;
+    border-radius: 45%;
 }
 
 .faculty-card h3 {
