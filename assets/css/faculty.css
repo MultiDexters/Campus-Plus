@@ -422,10 +422,6 @@ a {
     }
 }
 
-
-
-
-
 /* Schools Container */
 .schools-container {
     display: flex;
@@ -455,10 +451,10 @@ a {
 
 /* Faculty Container */
 .faculty-container {
-    max-width: 90%;
+    max-width: 82%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 .faculty-container h1 {
@@ -485,7 +481,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 30px;
+    gap: 50px;
 }
 
 .faculty-card {
@@ -493,15 +489,15 @@ a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 22%;
-    max-width: 22%;
+    width: 20%;
+    max-width: 20%;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .faculty-card img {
-    width: 35%;
-    height: auto;
+    width: 42%;
+    height: 42%;
     margin: 10px auto;
     display: block;
     border-radius: 45%;
@@ -519,6 +515,7 @@ a {
 
 .faculty-card .contact-info {
     color: #1e3d59;
+    font-size: 13px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -535,7 +532,8 @@ a {
 
 .search-bar {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 17px;
+    margin-bottom: 10px;
 }
 
 .search-bar input {
