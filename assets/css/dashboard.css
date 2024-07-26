@@ -850,29 +850,36 @@ a {
 
 .btn-has-before {
     margin-top: 60px;
-    padding: 12px 24px;
-    background-color: blue;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #2b6eb9 0%, #00346b 100%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1em;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    transition: background-color 0.3s;
+    transition: background 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-has-before:hover {
-    background-color: darkblue;
+    background: linear-gradient(90deg, #357ABD 0%, #004085 100%); 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-has-before:active {
+    background: linear-gradient(90deg, #2b6eb9 0%, #00346b 100%); 
+    transform: translateY(0); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .btn-has-before .span {
-    font-size: 0.8em;
+    font-size: 0.9em; 
+    font-weight: 520; 
 }
-
-
-
 
 
 
