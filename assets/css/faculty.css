@@ -439,14 +439,14 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .school-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -458,7 +458,7 @@ html {
     max-width: 82%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 6%;
+    margin-top: 8%;
 }
 
 .faculty-container h1 {
@@ -491,7 +491,7 @@ html {
 .faculty-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     width: 20%;
     max-width: 20%;
@@ -521,7 +521,14 @@ html {
     color: #1e3d59;
     font-size: 13px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+#faculty-rating {
+    color:  #666;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
 .faculty-card:hover {
@@ -531,19 +538,42 @@ html {
     cursor: pointer;
 }
 
+.rating-container {
+    display: flex;
+    margin-left: 25px;
+    margin-bottom: 1px;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.rating-stars i {
+    color: gold;
+    font-size: 1.0em; /* Adjust size as needed */
+    margin-right: 2px;
+}
+
 
 /* Add this to your existing CSS file */
 
 .search-bar {
     text-align: center;
-    margin-top: 17px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: -50px;
 }
 
 .search-bar input {
     width: 50%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 22px;
+    border: 2px solid #ccc;
     font-size: 16px;
+    
 }
+
+
+

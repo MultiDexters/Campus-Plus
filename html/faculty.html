@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="../assets/css/faculty.css">
     <title>Faculty Information</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/faculty.css"> <!-- Replace with the path to your CSS file -->
+
+
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--=============== Search Icon ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -211,7 +219,7 @@
         </nav>
     </header>
 
-    <!-- New Section for Boxes -->
+        <!-- New Section for Boxes -->
     <div class="schools-container">
         <a href="#CS"> <div class="school-box">FAST School of Computing</div> </a>
         <a href="#EE"> <div class="school-box">FAST School of EE</div> </a>
@@ -220,22 +228,34 @@
         <a href="#SH"> <div class="school-box">FAST School of Science & Humanities</div> </a>
     </div>
 
-    
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for a teacher...">
-    </div>
+    <input type="text" id="searchInput" placeholder="Search for a teacher..." style="padding-left: 25px;">
+    <i class="fa-solid fa-magnifying-glass"
+    style="margin-left: -75px; color: #afc1d2; border: solid #cdd9e3; border-width: 0 0 0 2px; padding-left: 25px; padding-bottom: 1px; text-align: center; line-height: 1.8; ">
+    </i>
+ 
+    <div class="right-box"></div>
+</div>
+
 
     <div class="faculty-container" id="CS">
         <h1>Faculty Information (FAST School of Computing)</h1>
 
 
         <div class="faculty-grid" id="facultyGrid">
+           
             <div class="faculty-card">
                 <img src="../assets/CS Faculty/dr. kasif zafar.png" alt="Dr. Kashif Zafar" loading="lazy">
                 <h3>Dr. Kashif Zafar</h3>
                 <p>Professor & HOD</p>
                 <p>Office: F-Block, 2nd floor, Room 24</p>
                 <p class="contact-info">Email: kashifzafr@nu.edu.pk</p>
+                <div class="rating-container">
+                    <div class="rating-stars" data-rating="4.9">
+                        <!-- Stars will be added here dynamically -->
+                    </div>
+                    <p id="faculty-rating"> (4.5/5 Rating)</p>
+                </div>
             </div>
             <div class="faculty-card">
                 <img src="../assets/CS Faculty/dr. amir wali.jpeg" alt="Dr. Aamir Wali" loading="lazy">

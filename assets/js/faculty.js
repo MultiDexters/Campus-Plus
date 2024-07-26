@@ -66,3 +66,29 @@ function easeInOutQuad(t, b, c, d) {
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const ratingElements = document.querySelectorAll('.rating-stars');
+
+    ratingElements.forEach(el => {
+        const rating = parseFloat(el.getAttribute('data-rating'));
+        const maxRating = 5;
+        const fullStar = '<i class="fa-solid fa-star"></i>'; // Full star
+        const halfStar = '<i class="fa-solid fa-star-half-alt"></i>'; // Half star
+        const emptyStar = '<i class="fa-regular fa-star"></i>'; // Empty star
+
+        let starsHTML = '';
+        for (let i = 1; i <= maxRating; i++) {
+            if (i <= rating) {
+                starsHTML += fullStar;
+            } else if (i - rating < 1) {
+                starsHTML += halfStar;
+            } else {
+                starsHTML += emptyStar;
+            }
+        }
+
+        el.innerHTML = starsHTML;
+    });
+});
+
