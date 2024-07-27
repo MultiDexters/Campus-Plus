@@ -422,10 +422,6 @@ a {
     }
 }
 
-
-
-
-
 /* Schools Container */
 .schools-container {
     display: flex;
@@ -443,22 +439,26 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .school-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+html {
+    scroll-behavior: auto;
+  }
 
 /* Faculty Container */
 .faculty-container {
-    max-width: 90%;
+    max-width: 82%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 8%;
 }
 
 .faculty-container h1 {
@@ -485,25 +485,26 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 30px;
+    gap: 50px;
 }
 
 .faculty-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    width: 22%;
-    max-width: 22%;
+    width: 20%;
+    max-width: 20%;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .faculty-card img {
-    width: 60%;
-    height: auto;
+    width: 42%;
+    height: 42%;
     margin: 10px auto;
     display: block;
+    border-radius: 45%;
 }
 
 .faculty-card h3 {
@@ -518,8 +519,9 @@ a {
 
 .faculty-card .contact-info {
     color: #1e3d59;
+    font-size: 13px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .faculty-card:hover {
@@ -529,18 +531,21 @@ a {
     cursor: pointer;
 }
 
-
 /* Add this to your existing CSS file */
-
 .search-bar {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: -50px;
 }
 
 .search-bar input {
     width: 50%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 22px;
+    border: 2px solid #ccc;
     font-size: 16px;
+    
 }
+
+
+
