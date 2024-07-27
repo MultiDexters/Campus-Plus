@@ -524,13 +524,6 @@ html {
     margin-bottom: 5px;
 }
 
-#faculty-rating {
-    color:  #666;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-
 .faculty-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -538,28 +531,7 @@ html {
     cursor: pointer;
 }
 
-.rating-container {
-    display: flex;
-    margin-left: 25px;
-    margin-bottom: 1px;
-}
-
-.rating-stars {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-bottom: 15px;
-}
-
-.rating-stars i {
-    color: gold;
-    font-size: 1.0em; /* Adjust size as needed */
-    margin-right: 2px;
-}
-
-
 /* Add this to your existing CSS file */
-
 .search-bar {
     text-align: center;
     margin-top: 50px;
