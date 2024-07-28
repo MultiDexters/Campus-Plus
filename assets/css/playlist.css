@@ -564,7 +564,7 @@ p {
     background-color: #fff;
     border-radius: 8px;
     border: 0.000001px ridge #c6d3f7; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     flex: 1 1 calc(33.333% - 20px); 
     max-width: calc(33.333% - 20px); 
