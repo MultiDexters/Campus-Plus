@@ -1,7 +1,7 @@
 // Sample course data
 const courses = [
     {name: 'Course 1', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://www.youtube.com/playlist?list=PL3' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
- {name: 'Course 2', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://www.youtube.com/playlist?list=PL3' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
+ {name: 'Theory of Automata', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://youtube.com/playlist?list=PLmXKhU9FNesSdCsn6YQqu9DmXRMsYdZ2T&feature=shared' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
  {name: 'Course 3', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://www.youtube.com/playlist?list=PL3' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
  {name: 'Course 4', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://www.youtube.com/playlist?list=PL3' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
  {name: 'Course 5', watchtime: 'Duration: 20 Hours', rating: 4.8, students: '20 Students', playlistLink: 'https://www.youtube.com/playlist?list=PL3' ,duration:'130 Videos',VideoId:'WQoB2z67hvY'},
