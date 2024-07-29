@@ -5,52 +5,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/support.css">
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
 
 <body>
-    <header>
-        <div class="logo">LOGO</div>
-        <nav>
-            <a href="#">Product</a>
-            <a href="#">Pricing</a>
-            <a href="#">Solutions</a>
-            <a href="#">Resources</a>
-        </nav>
-        <div class="cta">
-            <a href="#" class="free-trial">Free trial</a>
-            <a href="#" class="contact">Contact</a>
-        </div>
-    </header>
-
+    <div id="navbar-container" >
+    </div>
     <main>
         <section class="search-section">
-            <h1>How can we help?</h1>
+            <h1 style="margin-top: 10%;">FAST Help Center</h1>
             <div class="search-bar">
-                <input type="text" placeholder="Ask a question">
-                <button type="button">🔍</button>
+                <input type="text" placeholder="Search">
+                <button type="button" id="searchButton" onclick="performSearch()"></button>
             </div>
+            <div class="search-results"></div> <!-- Search results container here -->
         </section>
-
-        <section class="faq">
-            <h2>FAQ</h2>
-            <div class="faq-item">
-                <button class="faq-question">Why is MultiDexters the best start up? <span
-                        class="arrow">+</span></button>
-                <div class="faq-answer">Write a brief or detailed explanation to the question. Best practice is to make
-                    the answers expandable and collapsible for a better user experience.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Is How & Why best youtube channel? <span class="arrow">+</span></button>
-                <div class="faq-answer">Write a brief or detailed explanation to the question. Best practice is to make
-                    the answers expandable and collapsible for a better user experience.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Frequently asked question? <span class="arrow">+</span></button>
-                <div class="faq-answer">Write a brief or detailed explanation to the question. Best practice is to make
-                    the answers expandable and collapsible for a better user experience.</div>
+        <section class="faq container my-4">
+            <h2>FAQs</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- Category 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            University Life
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion accordion-flush" id="category1Accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion1"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion1">
+                                            What are the best study habits for FAST University students?</button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion1" class="accordion-collapse collapse"
+                                        data-bs-parent="#category1Accordion">
+                                        <div class="accordion-body">
+                                            To excel at FAST University, consider establishing a consistent study
+                                            schedule, joining study groups, utilizing campus resources, and staying
+                                            organized.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion2"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion2">
+                                            How can I balance academics and extracurricular activities</button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion2" class="accordion-collapse collapse"
+                                        data-bs-parent="#category1Accordion">
+                                        <div class="accordion-body">
+                                            Prioritize your tasks, manage your time effectively, and set clear goals.
+                                            Participate in extracurricular activities that align with your academic
+                                            interests.</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion3"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion3">
+                                            What are some tips for managing stress during exams?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion3" class="accordion-collapse collapse"
+                                        data-bs-parent="#category1Accordion">
+                                        <div class="accordion-body">
+                                            Practice mindfulness, maintain a healthy lifestyle, take regular breaks, and
+                                            seek support from friends, family, or counseling services.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            How to Survive FAST
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion accordion-flush" id="category2Accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion3"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion3">
+                                            What are the most challenging courses at FAST University?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion3" class="accordion-collapse collapse"
+                                        data-bs-parent="#category2Accordion">
+                                        <div class="accordion-body">
+                                            Courses in advanced subjects like Algorithms and Analysis, COAL (Computer
+                                            Organization and Assembly Language) are often challenging. Seek help from
+                                            professors or peers when needed.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion4"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion4">
+                                            How can I get help if I’m struggling with a subject?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion4" class="accordion-collapse collapse"
+                                        data-bs-parent="#category2Accordion">
+                                        <div class="accordion-body">
+                                            Stay engaged during lectures, actively seek assistance from instructors
+                                            during office hours, participate in study groups, and utilize online
+                                            resources to enhance your understanding.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Campus Resources
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion accordion-flush" id="category3Accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion5"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion5">
+                                            Where can I find academic advising on campus?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion5" class="accordion-collapse collapse"
+                                        data-bs-parent="#category3Accordion">
+                                        <div class="accordion-body">
+                                            Academic advising is typically available in the Student Services office or
+                                            through your department's academic advisors.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion6"
+                                            aria-expanded="false" aria-controls="flush-collapseQuestion6">
+                                            What resources are available for career development?
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion6" class="accordion-collapse collapse"
+                                        data-bs-parent="#category3Accordion">
+                                        <div class="accordion-body">
+                                            The Career Services office offers counseling, resume reviews, job search
+                                            assistance, and career fairs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Category 4 -->
+                <!-- <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Category 4
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="accordion accordion-flush" id="category4Accordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion7" aria-expanded="false" aria-controls="flush-collapseQuestion7">
+                                            Question 1
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion7" class="accordion-collapse collapse" data-bs-parent="#category4Accordion">
+                                        <div class="accordion-body">
+                                            Answer to question 1.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseQuestion8" aria-expanded="false" aria-controls="flush-collapseQuestion8">
+                                            Question 2
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseQuestion8" class="accordion-collapse collapse" data-bs-parent="#category4Accordion">
+                                        <div class="accordion-body">
+                                            Answer to question 2.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </section>
 
@@ -58,32 +233,283 @@
             <h2>Featured support articles</h2>
             <div class="articles">
                 <div class="article">
-                    <img src="../assets/images/course-1.jpg" alt="Article Image">
-                    <h3>Featured article title</h3>
-                    <p>Short blurb or introduction to the article's subject matter.</p>
+                    <a href="https://example.com/article1">
+                        <img src="../assets/images/course-1.jpg" alt="Article Image">
+                        <h3>How to Prepare for FAST Entry Test</h3>
+                        <p>Essential tips for acing the FAST entry test and securing your spot.</p>
+                    </a>
                 </div>
                 <div class="article">
-                    <img src="../assets/images/course-2.jpg" alt="Article Image">
-                    <h3>Featured article title</h3>
-                    <p>Short blurb or introduction to the article's subject matter.</p>
+                    <a href="https://example.com/article2">
+                        <img src="../assets/images/course-2.jpg" alt="Article Image">
+                        <h3>Tips for Succeeding in FAST University</h3>
+                        <p>Effective strategies to help you thrive academically and socially at FAST.</p>
+                    </a>
                 </div>
                 <div class="article">
-                    <img src="../assets/images/course-3.jpg" alt="Article Image">
-                    <h3>Featured article title</h3>
-                    <p>Short blurb or introduction to the article's subject matter.</p>
+                    <a href="https://example.com/article3">
+                        <img src="../assets/images/course-3.jpg" alt="Article Image">
+                        <h3>Exploring Extracurricular Activities at FAST</h3>
+                        <p>An overview of clubs, societies, and events to enrich your university life.</p>
+                    </a>
                 </div>
+                <!-- <div class="article">
+                    <a href="https://example.com/article4">
+                        <img src="../assets/images/course-4.jpg" alt="Article Image">
+                        <h3>Featured article title 4</h3>
+                        <p>Short blurb or introduction to the article's subject matter.</p>
+                    </a>
+                </div> -->
             </div>
         </section>
 
-        <section class="contact-support">
-            <h2>Talk to an expert</h2>
-            <p>We are here to answer all your questions.</p>
-            <button type="button" class="contact-button">Contact support</button>
-        </section>
+        <!-- <section class="contact-support">
+            <h2>Contact Support</h2>
+            <p>If you need further assistance, please reach out to our support team.</p>
+            <button class="contact-button">Contact Support</button>
+        </section> -->
     </main>
+    <div id="footer-container">
+        <div class="footer-div">
+            <footer class="ct-footer">
+                <div class="footer-container">
+        
+        
+                    <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+                        <div class="ct-footer-pre text-center-lg">
+                            <div class="inner">
+                                <span>Join Campus Plus to receive updates, news &amp; events!</span>
+                            </div>
+                            <div class="inner">
+                                <div class="form-group">
+                                    <input name="formfields[nl_email]" id="nl_email" class="validate[required]"
+                                        placeholder="Enter your email address" type="text" value=""> <label for="nl_email"
+                                        class="sr-only">Email Address</label> <button type="submit"
+                                        class="btn btn-motive">Join</button>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                    </form>
+                    <ul class="ct-footer-list text-center-sm">
+                        <li>
+                            <h2 class="ct-footer-list-header">
+                                Study Toolkit
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">FAST School of Computing</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">FAST School of Management</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Department of EE</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Department of CV</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Department of S & H</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2 class="ct-footer-list-header">
+                                Services
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">Discussion Forum</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">GPA Calculator</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Aggregate Calculator</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Time Table Generator</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">To Do List</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2 class="ct-footer-list-header">
+                                Blogs
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">Thought Leadership</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Webinars</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Events</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Sponsorships</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Advisors</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Training Program</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Activities &amp; Campaigns</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2 class="ct-footer-list-header">
+                                Events & News
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">WebCorpCo Blog</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Hackathons</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Videos</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">News Releases</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Newsletters</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2 class="ct-footer-list-header">
+                                About
+                            </h2>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">Student Support</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">FAQs</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">MultiDexters</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Contact Us</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+        
+                    <div class="ct-footer-meta text-center-sm">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-2">
+                                <img alt="logo" src="../assets/footer-images/logo.png">
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <address>
+                                    <span>FAST NUCES<br></span>852-B Milaad Street<br>
+                                    Lahore, 54770<br>
+                                    <span>Phone: <a href="tel:5555555555"> (042) 111 128 128</a></span>
+                                </address>
+                            </div>
+                            <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+        
+                            </div>
+                            <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+        
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <ul class="ct-socials list-unstyled list-inline">
+                                    <li>
+                                        <a href="" target="_blank" class="footer-a"><img alt="facebook"
+                                                src="../assets/footer-images/facebook-white.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank" class="footer-a"><img alt="twitter"
+                                                src="../assets/footer-images/twitter-white.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank" class="footer-a"><img alt="youtube"
+                                                src="../assets/footer-images/youtube-white.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank" class="footer-a"><img alt="instagram"
+                                                src="../assets/footer-images/instagram-white.png"></a>
+                                    </li>
+                                    <li>
+                                        <a href="" target="_blank" class="footer-a"><img alt="pinterest"
+                                                src="../assets/footer-images/pinterest-white.png"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="ct-footer-post">
+                    <div class="container">
+                        <div class="inner-left">
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-a">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">News</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-a">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-right">
+                            <p>
+                                Copyright © 2024 MultiDexters Inc.&nbsp;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+            </footer>
+        </div>
+    </div>
+    
+    <script src="/assets/js/support.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     fetch('footer.html')
+        //         .then(response => response.text())
+        //         .then(data => {
+        //             document.getElementById('footer-container').innerHTML = data;
+        //         })
+        //         .catch(error => console.error('Error loading footer:', error));
+        // });
+    </script>
 
-    <script src="../assets/js/support.js"></script>
-    <script src="//code.tidio.co/ehsnsg7lu0jw27anlv0xwsezaibr1jip.js" async></script>
 </body>
 
 </html>
