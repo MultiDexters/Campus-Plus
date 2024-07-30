@@ -868,6 +868,7 @@ a {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    height: 380px;
 }
 
 .course-card:hover {
@@ -986,6 +987,7 @@ a {
 }
 
 .course-card .card-meta-list {
+
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -1007,7 +1009,7 @@ a {
     content: "|";
     display: inline-block;
     color: hsl(0, 0%, 90%);
-    padding: 0;
+    padding: 10%;
 }
 
 .course-card .card-meta-item ion-icon {
@@ -1016,13 +1018,13 @@ a {
 }
 
 .btn-has-before {
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 12px 24px;
     background-color: blue;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -1412,6 +1414,7 @@ a {
 
 .blog-container {
     max-width: 1200px;
+    
     margin: 0 auto;
     text-align: center;
 }
