@@ -704,6 +704,9 @@ p {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .course-container{
+        max-width: 1024px;
+    }
     .course-card {
         flex: 1 1 calc(33.333% - 20px); 
         max-width: calc(33.333% - 20px);
@@ -711,6 +714,12 @@ p {
 }
 
 @media (max-width: 768px) {
+    .search-container{
+        max-width: 768px;
+    }
+    .course-container{
+        max-width: 768px;
+    }
     .course-card {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px); 
@@ -718,6 +727,15 @@ p {
 }
 
 @media (max-width: 480px) {
+    .intro-section {
+        max-width: 400px;
+    }
+    .search-container{
+        max-width: 400px;
+    }
+    .course-container{
+        max-width: 400px;
+    }
     .course-card {
         flex: 1 1 100%; 
         max-width: 100%; 
