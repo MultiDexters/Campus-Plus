@@ -1,68 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
-
+document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.querySelector('.search-bar input');
-    const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+    const searchButton = document.querySelector('.search-bar button');
+    const searchResults = document.createElement('div');
+    searchResults.className = 'search-results';
+    document.querySelector('.search-bar').appendChild(searchResults);
 
-    // Collect FAQ questions and answers
-    const faqData = faqItems.map(item => {
-        return {
-            element: item,
-            question: item.querySelector('.faq-question').textContent,
-            answer: item.querySelector('.faq-answer').textContent
-        };
-    });
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('input', performSearch);
 
-    // Initialize Fuse.js
-    const fuse = new Fuse(faqData, {
-        keys: ['question', 'answer'],
-        threshold: 0.3, // Adjust this for fuzziness; lower means more strict
-    });
+    function performSearch() {
+        const query = searchInput.value.toLowerCase();
+        const results = [];
 
-    searchInput.addEventListener('input', () => {
-        const query = searchInput.value;
-        const result = fuse.search(query);
+        // Clear previous search results
+        searchResults.innerHTML = '';
 
-        // Hide all FAQ items
-        faqItems.forEach(item => item.style.display = 'none');
-
-        // Show only matched FAQ items
-        if (query === '') {
-            faqItems.forEach(item => item.style.display = 'block');
-        } else {
-            result.forEach(({ item }) => {
-                item.element.style.display = 'block';
-            });
+        if (query.trim() === '') {
+            searchResults.style.display = 'none'; // Hide if input is empty
+            return;
         }
-    });
 
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const answer = button.nextElementSibling;
-            const arrow = button.querySelector('.arrow');
-
-            // Check if the answer is already expanded
-            if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-                answer.style.maxHeight = '0';
-                arrow.textContent = '+';
-            } else {
-                // First, reset all answers to ensure only one is expanded at a time
-                document.querySelectorAll('.faq-answer').forEach(item => {
-                    item.style.maxHeight = '0';
-                    item.previousElementSibling.querySelector('.arrow').textContent = '+';
-                });
-
-                // Set the maxHeight to the scrollHeight of the answer to expand it
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                arrow.textContent = '-';
+        // Iterate through all div elements on the page
+        const allDivs = document.querySelectorAll('div');
+        allDivs.forEach(div => {
+            if (div.textContent.toLowerCase().includes(query)) {
+                results.push(div);
             }
         });
-    });
+
+        if (results.length > 0) {
+            searchResults.style.display = 'block'; // Show results
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                resultItem.textContent = result.textContent.trim().substring(0, 100) + '...'; // Trim and show preview
+                searchResults.appendChild(resultItem);
+                resultItem.addEventListener('click', () => {
+                    result.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Scroll to the result
+                });
+            });
+        } else {
+            searchResults.innerHTML = '<div class="no-results">No results found</div>';
+            searchResults.style.display = 'block'; // Show "No results" message
+        }
+    }
 });

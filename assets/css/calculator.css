@@ -443,10 +443,10 @@ a {
 }
 
 body {
-  background-image: url("/assets/images/calculatorBackground.svg ");
-  background-size: 25%; /* Adjust to fit the background appropriately */
-  background-repeat: repeat;
-  background-attachment: fixed; /* Makes the background fixed on scroll */
+  /* background-image: url("/assets/images/calculatorBackground.svg "); */
+  /* background-size: 25%; Adjust to fit the background appropriately */
+  /* background-repeat: repeat; */
+  /* background-attachment: fixed; Makes the background fixed on scroll */
 }
 
 body {
