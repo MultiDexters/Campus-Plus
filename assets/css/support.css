@@ -1,246 +1,390 @@
 /* General styling adjustments */
 body {
-    font-family: "Roboto", Arial, sans-serif; /* Modern font */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: #f8f9fa;
-    color: #343a40;
-  }
-  
-  .search-section {
-    text-align: center;
-    padding: 40px;
-    background-color: #f1f1f1;
-  }
-  
-  .search-bar {
-    display: flex;
+  font-family: "Roboto", Arial, sans-serif; /* Modern font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.search-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f1f1f1;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px; /* Space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  padding: 0;
+}
+
+.search-bar button i {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.faq {
+  padding: 40px 5%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the FAQ container */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.faq h2 {
+  text-align: center;
+  color: #343a40;
+}
+.generator-container h2 {
+  margin-top: 8%;
+  margin-bottom: -4%;
+  text-align: center;
+  color: #343a40;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #007bff; /* Lighter blue for expanded state */
+  color: #ffffff; /* White text color */
+}
+
+.featured-articles {
+  padding: 40px 5%;
+  background-color: #fff;
+}
+
+.featured-articles h2 {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 40px;
+  color: #343a40;
+}
+
+.articles {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.article {
+  width: 400px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s, box-shadow 0.5s; /* Smooth animation */
+}
+
+.article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s; /* Smooth zoom */
+}
+
+.article h3 {
+  padding: 20px 15px;
+  margin: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.article p {
+  padding: 15px;
+  margin: 0;
+  color: #343a40;
+}
+
+.article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.contact-support {
+  text-align: center;
+  padding: 40px 5%;
+  background-color: #f1f1f1;
+}
+
+.contact-support h2 {
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.contact-support p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
+  transition: all 0.3s;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
+  transition: all 0.3s;
+}
+
+.featured-articles .article a {
+  text-decoration: none; /* Remove the underline */
+  color: inherit; /* Inherit color from parent element */
+}
+
+.featured-articles .article a:hover {
+  text-decoration: none; /* Remove underline on hover as well */
+  color: #0056b3; /* Change color on hover if needed */
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff; /* White background for better visibility */
+  border: 1px solid #ddd; /* Light border color */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for better depth */
+  max-height: 300px;
+  overflow-y: auto;
+  display: none; /* Hide by default */
+  z-index: 1000;
+  padding: 0; /* Remove default padding */
+}
+
+.search-result-item {
+  padding: 10px 15px; /* Add padding for better spacing */
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* Lighter border between items */
+  color: #333; /* Darker text color for better readability */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.search-result-item:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+  color: #007bff; /* Change text color on hover */
+}
+
+.no-results {
+  padding: 10px;
+  color: #999;
+  text-align: center; /* Center align text */
+  font-style: italic; /* Italicize text */
+}
+
+.faqTitle {
+  font-weight: bold;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  width: 100%;
+  padding-right: 50px; /* Increase to make space for the icon */
+}
+
+#clearButton {
+  position: absolute;
+  right: 20px; /* Move the icon 10px to the left from the previous position */
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#clearButton i {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows wrapping of cards */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 8%;
+  margin-left: 6%;
+}
+
+.card {
+  padding: 0% !important;
+  position: relative;
+  width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card p {
+  margin: 10px 0 0;
+  color: #666;
+  text-align: center;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #e0e0e0;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+  transform: scaleY(0.95);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover .card-overlay {
+  transform: scaleY(1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-image img {
+  transform: scale(1.03);
+}
+.card,
+.card-image img {
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media (max-width: 1200px) {
+  .card-container {
+    flex-direction: row;
     align-items: center;
-    position: relative;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0%;
   }
-  
-  .search-bar input {
-    width: 100%;
-    padding: 10px 15px;
-    padding-right: 40px; /* Space for the icon */
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    outline: none;
-    transition: border-color 0.3s;
+  .card {
+    max-width: 300px;
   }
-  
-  .search-bar input:focus {
-    border-color: #007bff;
+  .card-image {
+    height: 300px;
   }
-  
-  .search-bar button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #000;
-    padding: 0;
+  .card-overlay {
+    height: 30%;
   }
-  
-  .search-bar button i {
-    font-size: 1.2rem; /* Adjust size as needed */
-  }
-  
-  .faq {
-    padding: 40px 5%;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the FAQ container */
-    border-radius: 8px; /* Rounded corners */
-  }
-  
-  .faq h2 {
-    text-align: center;
-    color: #343a40;
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #007bff; /* Lighter blue for expanded state */
-    color: #ffffff; /* White text color */
-  }
-  
-  .featured-articles {
-    padding: 40px 5%;
-    background-color: #fff;
-  }
-  
-  .featured-articles h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #343a40;
-  }
-  
-  .articles {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
   .article {
-    width: 400px;
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 1%;
-    transition: transform 0.5s, box-shadow 0.5s; /* Smooth animation */
+    width: 350px;
+    height: 80% auto !important;
   }
-  
-  .article img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.5s; /* Smooth zoom */
+}
+
+@media (max-width: 768px) {
+  .search-section {
+    margin-top: 5%;
   }
-  
-  .article h3 {
-    padding: 20px 15px;
-    margin: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
-  }
-  
-  .article p {
-    padding: 15px;
-    margin: 0;
-    color: #343a40;
-  }
-  
-  .article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .article img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-  }
-  
-  .contact-support {
-    text-align: center;
-    padding: 40px 5%;
-    background-color: #f1f1f1;
-  }
-  
-  .contact-support h2 {
-    margin-bottom: 20px;
-    color: #343a40;
-  }
-  
-  .contact-support p {
-    margin-bottom: 20px;
-    color: #6c757d;
-  }
-  
-  .contact-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .contact-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .accordion-button::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
-    transition: all 0.3s;
-  }
-  
-  .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
-    transition: all 0.3s;
-  }
-  
-  .featured-articles .article a {
-    text-decoration: none; /* Remove the underline */
-    color: inherit; /* Inherit color from parent element */
-  }
-  
-  .featured-articles .article a:hover {
-    text-decoration: none; /* Remove underline on hover as well */
-    color: #0056b3; /* Change color on hover if needed */
-  }
-  
-  .search-results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff; /* White background for better visibility */
-    border: 1px solid #ddd; /* Light border color */
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for better depth */
-    max-height: 300px;
-    overflow-y: auto;
-    display: none; /* Hide by default */
-    z-index: 1000;
-    padding: 0; /* Remove default padding */
-  }
-  
-  .search-result-item {
-    padding: 10px 15px; /* Add padding for better spacing */
-    cursor: pointer;
-    border-bottom: 1px solid #eee; /* Lighter border between items */
-    color: #333; /* Darker text color for better readability */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
-  }
-  
-  .search-result-item:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
-    color: #007bff; /* Change text color on hover */
-  }
-  
-  .no-results {
-    padding: 10px;
-    color: #999;
-    text-align: center; /* Center align text */
-    font-style: italic; /* Italicize text */
-  }
-  
-  .faqTitle {
-    font-weight: bold;
-  }
-  
-  .search-bar {
-    position: relative;
-    display: flex;
+  .card-container {
+    flex-direction: column;
     align-items: center;
+    margin-left: 2%;
+    color: #000;
   }
-  
-  #searchInput {
-    width: 100%;
-    padding-right: 50px; /* Increase to make space for the icon */
+
+  .card {
+    width: 95%; /* Increase width to make it slightly wider */
+    max-width: 350px; /* Adjust max-width to fit your design */
+    margin-right: 5%;
   }
-  
-  #clearButton {
-    position: absolute;
-    right: 20px; /* Move the icon 10px to the left from the previous position */
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: transparent;
-    cursor: pointer;
+
+  .card-image {
+    height: 300px; /* Adjust height of the image container */
   }
-  
-  #clearButton i {
-    font-size: 1.2rem; /* Adjust size as needed */
+
+  .card-image img {
+    object-fit: cover; /* Ensure the image covers the container */
   }
-  
+}
