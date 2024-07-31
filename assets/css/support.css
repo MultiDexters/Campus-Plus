@@ -132,9 +132,10 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.article img:hover {
+.article:hover img {
   transform: scale(1.05); /* Slight zoom on hover */
 }
+
 
 .contact-support {
   text-align: center;
