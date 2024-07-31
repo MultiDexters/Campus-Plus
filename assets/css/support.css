@@ -371,7 +371,7 @@ body {
   .card-container {
     flex-direction: column;
     align-items: center;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     color: #000;
   }
 
