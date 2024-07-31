@@ -9,10 +9,15 @@
 
     <!--=============== REMIXICONS ===============-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--=============== Search Icon ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <header class="header">
+       
         <nav class="nav container">
             <div class="nav__data">
                 <a href="#" class="nav__logo" style="font-size: 24px;">
@@ -210,112 +215,1623 @@
         </nav>
     </header>
 
-    <!-- New Section for Boxes -->
+        <!-- New Section for Boxes -->
     <div class="schools-container">
-        <div class="school-box">FAST School of Computing</div>
-        <div class="school-box">FAST School of EE</div>
-        <div class="school-box">FAST School of CV</div>
-        <div class="school-box">FAST School of Management</div>
-        <div class="school-box">FAST School of Science & Humanities</div>
+        <a href="#CS"> <div class="school-box">FAST School of Computing</div> </a>
+        <a href="#EE"> <div class="school-box">FAST School of EE</div> </a>
+        <a href="#CV"> <div class="school-box">FAST School of CV</div> </a>
+        <a href="#M"> <div class="school-box">FAST School of Management</div> </a>
+        <a href="#SH"> <div class="school-box">FAST School of Science & Humanities</div> </a>
     </div>
 
-    <div class="faculty-container">
+    <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for a teacher..." style="padding-left: 25px;">
+    <i class="fa-solid fa-magnifying-glass"
+    style="margin-left: -75px; color: #afc1d2; border: solid #cdd9e3; border-width: 0 0 0 2px; padding-left: 25px; padding-bottom: 1px; text-align: center; line-height: 1.8; ">
+    </i>
+ 
+    <div class="right-box"></div>
+</div>
+
+
+    <div class="faculty-container" id="CS">
         <h1>Faculty Information (FAST School of Computing)</h1>
 
 
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for a teacher...">
+        <div class="faculty-grid" id="facultyGrid">
+           
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. kasif zafar.webp" alt="Dr. Kashif Zafar" loading="lazy">
+                <h3>Dr. Kashif Zafar</h3>
+                <p>Professor & HOD</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: kashifzafr@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. amir wali.webp" alt="Dr. Aamir Wali" loading="lazy">
+                <h3>Dr. Aamir Wali</h3>
+                <p>Professor & HOD</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aamir.wali@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. asif mahmood gilani.webp" alt="Dr. Asif Mahmood Gillani" loading="lazy">
+                <h3>Dr. Asif Mahmood Gillani</h3>
+                <p>Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: asif.gilani@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. zareen alamgir.webp" alt="Dr. Zareen Alamgir" loading="lazy">
+                <h3>Dr. Zareen Alamgir</h3>
+                <p>Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: zareen.alamgir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. arshad ali.webp" alt="Dr. Arshad Ali" loading="lazy">
+                <h3>Dr. Arshad Ali</h3>
+                <p>Associate Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email:  arshad.ali1@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. asma naseer.webp" alt="Dr. Asma Naseer" loading="lazy">
+                <h3>Dr. Asma Naseer</h3>
+                <p>Associate Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: asma.naseer@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. rana asif rehman.webp" alt="Dr. Rana Asif Rehman" loading="lazy">
+                <h3>Dr. Rana Asif Rehman</h3>
+                <p>Associate Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email:  r.asif@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. saira karim.webp" alt="Dr. Saira Karim" loading="lazy">
+                <h3>Dr. Saira Karim</h3>
+                <p>Associate Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: saira.karim@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. zeeshan ali khan.webp" alt="Dr. Zeeshan Ali Khan" loading="lazy">
+                <h3>Dr. Zeeshan Ali Khan</h3>
+                <p>Associate Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: zeeshanali.khan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. aatira anum.webp" alt="Dr. Aatira Anum" loading="lazy">
+                <h3>Dr. Aatira Anum</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aatira.anum@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. abdul qadeer.webp" alt="Dr. Abdul Qadeer" loading="lazy">
+                <h3>Dr. Abdul Qadeer</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aqadeer@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. ali afzal malik.webp" alt="Faculty Photo" loading="lazy">
+                <h3>Dr. Ali Afzal Malik</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: ali.afzal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. ammar haider.webp" alt="Dr. Ammar Haider" loading="lazy">
+                <h3>Dr. Ammar Haider</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: ammar.haider@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. asma ahmad farhan.webp" alt="Dr. Asma Ahmad Farhan" loading="lazy">
+                <h3>Dr. Asma Ahmad Farhan</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: asma.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. faisal aslam.webp" alt="Dr. Faisal Aslam" loading="lazy">
+                <h3>Dr. Faisal Aslam</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: faisal.aslam@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. hajra waheed.webp" alt="Dr. Hajra Waheed" loading="lazy">
+                <h3>Dr. Hajra Waheed</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hajra.waheed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. haroon mahmood.webp" alt="Dr. Haroon Mahmood" loading="lazy">
+                <h3>Dr. Haroon Mahmood</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: haroon.mahmood@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. iqra safder.webp" alt="Dr. Iqra Safder" loading="lazy">
+                <h3>Dr. Iqra Safder</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: iqra.safder@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. maryam bashir.webp" alt="Dr. Maryam Bashir" loading="lazy">
+                <h3>Dr. Maryam Bashir</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: maryam.bashir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. mirza mubasher baig.webp" alt="Dr. Mirza Mubasher Baig" loading="lazy">
+                <h3>Dr. Mirza Mubasher Baig</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: mubasher.baig@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. muhammad ahmad raza.webp" alt="Dr. Muhammad Ahmad Raza" loading="lazy">
+                <h3>Dr. Muhammad Ahmad Raza</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: muhammad.ahmadraza@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. syed muhammad irteza.webp" alt="Dr. Syed Mohammad Irteza" loading="lazy">
+                <h3>Dr. Syed Mohammad Irteza</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: m.Irteza@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. tahir ijaz.webp" alt="Dr. Tahir Ejaz" loading="lazy">
+                <h3>Dr. Tahir Ejaz</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: tahir.ejaz@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. zeeshan ali rana.webp" alt="Dr. Zeeshan Ali Rana" loading="lazy">
+                <h3>Dr. Zeeshan Ali Rana</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: zeeshan.rana@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. farooq ahmed.webp" alt="Dr. Farooq Ahmed" loading="lazy">
+                <h3>Dr. Farooq Ahmed</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: farooq.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/dr. hammad naveed.webp" alt="Dr. Hammad Naveed" loading="lazy">
+                <h3>Dr. Hammad Naveed</h3>
+                <p>Adj. Professor</p> 
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hammad.naveed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/amir raheem.webp" alt="Mr. Aamir Raheem" loading="lazy">
+                <h3>Mr. Aamir Raheem</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aamir.raheem@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/abeeda karam.webp" alt="Ms. Abeeda Akram" loading="lazy">
+                <h3>Ms. Abeeda Akram</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: abeeda.akram@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/bushra rashid.webp" alt="Ms. Bushra Rashid" loading="lazy">
+                <h3>Ms. Bushra Rashid</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: bushra.rashid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+            <img src="../assets/faculty images/CS Faculty/ishaq raza.webp"  alt="Mr. Ishaq Raza" loading="lazy">
+                <h3>Mr. Ishaq Raza</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: ishaq.raza@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/lehmia khan.webp"  alt="Ms. Lehmia Kiran" loading="lazy">
+                <h3>Ms. Lehmia Kiran</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: lehmia.kiran@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/maimoona akram.webp"  alt="Ms. Maimoona Akram" loading="lazy">
+                <h3>Ms. Maimoona Akram</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: maimoona.akram@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CS Faculty/mirza waqar baig.webp"  alt="Mr. Mirza Waqar Baig" loading="lazy">
+                <h3>Mr. Mirza Waqar Baig</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: waqar.baig@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/noshaba nasir.webp"  alt="Ms. Noshaba Nasir" loading="lazy">
+                <h3>Ms. Noshaba Nasir</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: noshaba.nasir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/omer ali.webp"  alt="Mr. Omer Ali" loading="lazy">
+                <h3>Mr. Omer Ali</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: ali.omer@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/samin iftikhar.webp"  alt="Ms. Samin Iftikhar" loading="lazy">
+                <h3>Ms. Samin Iftikhar</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: samin.iftikhar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/sobia tariq javed.webp"  alt="Ms. Sobia Tariq Javed" loading="lazy">
+                <h3>Ms. Sobia Tariq Javed</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: sobia.tariq@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/tahreem yasir.webp"  alt="Ms. Tahreem Yasir" loading="lazy">
+                <h3>Ms. Tahreem Yasir</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: tahreem.yasir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/waqas manzoor.webp"  alt="Mr. Waqas Manzoor" loading="lazy">
+                <h3>Mr. Waqas Manzoor</h3>
+                <p>Assistant Professor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: waqas.manzoor@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/aleena ahmad.webp"  alt="Ms. Aleena Ahmad" loading="lazy">
+                <h3>Ms. Aleena Ahmad</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aleena.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/anosha khan.webp"  alt="Ms. Anosha Khan" loading="lazy">
+                <h3>Ms. Anosha Khan</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: anosha.khan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/ansa liaqat.webp"  alt="Ms. Ansa Liaqat" loading="lazy">
+                <h3>Ms. Ansa Liaqat</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: ansa.liaqat@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/arooj khalil.webp"  alt="Ms. Arooj Khalil" loading="lazy">
+                <h3>Ms. Arooj Khalil</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: arooj.khalil@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/asbah khalid.webp"  alt="Ms. Asbah Khalid" loading="lazy">
+                <h3>Ms. Asbah Khalid</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: asbah.khalid@lhr.nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/danyal farhat.webp"  alt="Mr. Danyal Farhat" loading="lazy">
+                <h3>Mr. Danyal Farhat</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: danyal.farhat@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/eesha tur razia babar.webp"  alt="Ms. Eesha Tur Razia Babar" loading="lazy">
+                <h3>Ms. Eesha Tur Razia Babar</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: esha.razia@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/fraz yousaf.webp"  alt="Mr. Fraz Yousaf" loading="lazy">
+                <h3>Mr. Fraz Yousaf</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: fraz.yousaf@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hafiz muhammad usama hassan alvi.webp"  alt="Mr. Hafiz Muhammad Usama Hassan Alvi" loading="lazy">
+                <h3>Mr. Hafiz Muhammad Usama Hassan Alvi</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: usama.hassan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hafsa tariq javed.webp"  alt="Ms. Hafsa Tariq Javed" loading="lazy">
+                <h3>Ms. Hafsa Tariq Javed</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hafsa.tariq@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hamad ul qudous.webp"  alt="Mr. Hamad Ul Qudous" loading="lazy">
+                <h3>Mr. Hamad Ul Qudous</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hamad.ulqudous@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hina iqbal.webp"  alt="Ms. Hina Iqbal" loading="lazy">
+                <h3>Ms. Hina Iqbal</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hina.iqbal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hira butt.webp"  alt="Ms. Hira Butt" loading="lazy">
+                <h3>Ms. Hira Butt</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hira.butt@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/hira ilyas.webp"  alt="Ms. Hira Ilyas" loading="lazy">
+                <h3>Ms. Hira Ilyas</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hira.ilyas@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/kiran khurshid.webp"  alt="Ms. Kiran Khurshid" loading="lazy">
+                <h3>Ms. Kiran Khurshid</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: kiran.khurshid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/Muhammad saif ul islam.webp"  alt="Mr. M. Saif Ul Islam" loading="lazy">
+                <h3>Mr. M. Saif Ul Islam</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: muhammad.saif@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/maham naeem.webp"  alt="Ms. Maham Naeem" loading="lazy">
+                <h3>Ms. Maham Naeem</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: maham.naeem@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/mamoona majid.webp"  alt="Ms. Mamoona Majid" loading="lazy">
+                <h3>Ms. Mamoona Majid</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: mamoona.majid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/mehroze khan.webp"  alt="Ms. Mehroze Khan" loading="lazy">
+                <h3>Ms. Mehroze Khan</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: mehroze.khan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/momna zaneb.webp"  alt="Ms. Momna Zaneb" loading="lazy">
+                <h3>Ms. Momna Zaneb</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: momna.zaneb@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/mubashar hussain.webp"  alt="Mr. Mubashar Hussain" loading="lazy">
+                <h3>Mr. Mubashar Hussain</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: mubashar.hussain@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad naveed.webp"  alt="Mr. Muhammad Naveed" loading="lazy">
+                <h3>Mr. Muhammad Naveed</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: muhammad.naveed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad saifullah taanvir.webp"  alt="Mr. Muhammad Saifullah Tanvir" loading="lazy">
+                <h3>Mr. Muhammad Saifullah Tanvir</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: saifullah.tanvir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad zeeshan nazar.webp"  alt="Mr. Muhammad Zeeshan Nazar" loading="lazy">
+                <h3>Mr. Muhammad Zeeshan Nazar</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email:  zeeshan.nazar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/namra absar.webp"  alt="Ms. Namra Absar" loading="lazy">
+                <h3>Ms. Namra Absar</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: namra.absar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/razi-uddin.webp"  alt="Mr. Razi-uddin" loading="lazy">
+                <h3>Mr. Razi-uddin</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: razi.uddin@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/rubab anam janjua.webp"  alt="Ms. Rubab Anam Janjua" loading="lazy">
+                <h3>Ms. Rubab Anam Janjua</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: rubab.anam@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/sajid ali kazmi.webp"  alt="Mr. Sajid Ali Kazmi" loading="lazy">
+                <h3>Mr. Sajid Ali Kazmi</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: sajid.kazmi@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/tazeem haider.webp"  alt="Ms. Tazeem Haider" loading="lazy">
+                <h3>Ms. Tazeem Haider</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: tazeem.haider@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/umm e ammarah.webp"  alt="Ms. Umm E Ammarah" loading="lazy">
+                <h3>Ms. Umm E Ammarah</h3>
+                <p>Lecturer</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: umme.ammarah@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/aqib zeeshan.webp"  alt="Mr. Aqib Zeeshan" loading="lazy">
+                <h3>Mr. Aqib Zeeshan</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: aqib.zeeshan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/junaid hussain muzammal.webp"  alt="Mr. Junaid Hussain Muzammal" loading="lazy">
+                <h3>Mr. Junaid Hussain Muzammal</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: junaid.hussain@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad hasan.webp"  alt="Mr. Muhammad Hasan" loading="lazy">
+                <h3>Mr. Muhammad Hasan</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: m.hasan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad hashir mohsineen.webp"  alt="Mr. Muhammad Hashir Mohsineen" loading="lazy">
+                <h3>Mr. Muhammad Hashir Mohsineen</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: hashir.mhsineen@lhr.nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammaad usman anwer.webp"  alt="Mr. Muhammad Usman Anwer" loading="lazy">
+                <h3>Mr. Muhammad Usman Anwer</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: usman.anwer@lhr.nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/seemab ayub.webp"  alt="Ms. Seemab Ayub" loading="lazy">
+                <h3>Ms. Seemab Ayub</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: seemab.ayub@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/sohaib ahmad.webp"  alt="Mr. Sohaib Ahmad" loading="lazy">
+                <h3>Mr. Sohaib Ahmad</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: sohaib.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/sukhan amir.webp"  alt="Ms. Sukhan Amir" loading="lazy">
+                <h3>Ms. Sukhan Amir</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: sukhan.amir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/syeda zehra batool.webp"  alt="Ms. Syeda Zehra Batool" loading="lazy">
+                <h3>Ms. Syeda Zehra Batool</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: zehra.batool@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/zoha waheed.webp"  alt="Ms. Zoha Waheed" loading="lazy">
+                <h3>Ms. Zoha Waheed</h3>
+                <p>Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: zoha.waheed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/mamoona akbar khan.webp"  alt="Ms. Mamoona Akbar Khan" loading="lazy">
+                <h3>Ms. Mamoona Akbar Khan</h3>
+                <p>Junior Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: mamoona.akbar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/marwa khan.webp"  alt="Ms. Marwa Khan" loading="lazy">
+                <h3>Ms. Marwa Khan</h3>
+                <p>Junior Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: marwa.khan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/muhammad amir iqbal.webp"  alt="Mr. Muhammad Amir Iqbal" loading="lazy">
+                <h3>Mr. Muhammad Amir Iqbal</h3>
+                <p>Adj. Faculty</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: amir.iqbal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/nauman moazzam hayat.webp"  alt="Mr. Nauman Moazzam Hayat" loading="lazy">
+                <h3>Mr. Nauman Moazzam Hayat</h3>
+                <p>Adj. Faculty</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: nauman.moazzam@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/saba tariq.webp"  alt="Ms. Saba Tariq" loading="lazy">
+                <h3>Ms. Saba Tariq</h3>
+                <p>Junior Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: saba.tariq@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/salman shoaib.webp"  alt="Mr. Salman Shoaib" loading="lazy">
+                <h3>Mr. Salman Shoaib</h3>
+                <p>Junior Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: salman.shoaib@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+               <img src="../assets/faculty images/CS Faculty/samman ashraf.webp"  alt="Ms. Samman Ashraf" loading="lazy">
+                <h3>Ms. Samman Ashraf</h3>
+                <p>Junior Instructor</p>
+                <p>Office: F-Block, 2nd floor, Room 24</p>
+                <p class="contact-info">Email: samman.ashraf@nu.edu.pk</p>
+            </div>
+           
         </div>
+    </div>
 
+    <div class="faculty-container" id="EE">
+        <h1>Faculty Information (FAST School of Electrical Engineering)</h1>
 
         <div class="faculty-grid" id="facultyGrid">
             <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. John Doe</h3>
-                <p>Professor</p>
-                <p>Department of Computer Science</p>
-                <p class="contact-info">Email: john.doe@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Jane Smith</h3>
-                <p>Associate Professor</p>
-                <p>Department of Mathematics</p>
-                <p class="contact-info">Email: jane.smith@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Emily White</h3>
-                <p>Assistant Professor</p>
-                <p>Department of Physics</p>
-                <p class="contact-info">Email: emily.white@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Robert Brown</h3>
-                <p>Lecturer</p>
-                <p>Department of Chemistry</p>
-                <p class="contact-info">Email: robert.brown@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. John Doe</h3>
-                <p>Professor</p>
-                <p>Department of Computer Science</p>
-                <p class="contact-info">Email: john.doe@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Jane Smith</h3>
-                <p>Associate Professor</p>
-                <p>Department of Mathematics</p>
-                <p class="contact-info">Email: jane.smith@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Emily White</h3>
-                <p>Assistant Professor</p>
-                <p>Department of Physics</p>
-                <p class="contact-info">Email: emily.white@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Robert Brown</h3>
-                <p>Lecturer</p>
-                <p>Department of Chemistry</p>
-                <p class="contact-info">Email: robert.brown@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Emily White</h3>
-                <p>Assistant Professor</p>
-                <p>Department of Physics</p>
-                <p class="contact-info">Email: emily.white@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Robert Brown</h3>
-                <p>Lecturer</p>
-                <p>Department of Chemistry</p>
-                <p class="contact-info">Email: robert.brown@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Emily White</h3>
-                <p>Assistant Professor</p>
-                <p>Department of Physics</p>
-                <p class="contact-info">Email: emily.white@example.com</p>
-            </div>
-            <div class="faculty-card">
-                <img src="../assets/images/t1.png" alt="Faculty Photo">
-                <h3>Dr. Robert Brown</h3>
-                <p>Lecturer</p>
-                <p>Department of Chemistry</p>
-                <p class="contact-info">Email: robert.brown@example.com</p>
-            </div>
+                <img src="../assets/faculty images/EE Faculty/dr. saima zafar.webp"  alt="Dr. Saima Zafar loading="lazy"">
+                 <h3>Dr. Saima Zafar</h3>
+                 <p>Professor & HOD</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: saima.zafar@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/dr. s m sajid.webp"  alt="Dr. S.M. Sajid" loading="lazy">
+                 <h3>Dr. S.M. Sajid</h3>
+                 <p>Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: sm.sajid@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/dr. syed aun abbas.webp"  alt="Dr. Syed Aun Abbas" loading="lazy">
+                 <h3>Dr. Syed Aun Abbas</h3>
+                 <p>Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: aun.abbas@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/dr. omer saleem.webp"  alt="Dr. Omer Saleem" loading="lazy">
+                 <h3>Dr. Omer Saleem</h3>
+                 <p>Associate Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: omer.saleem@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/dr. jabran khan.webp"  alt="Dr. Jabran Khan" loading="lazy">
+                 <h3>Dr. Jabran Khan</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: jabran.khan@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/dr. kashif saeed.webp"  alt="Dr. Kashif Saeed" loading="lazy">
+                 <h3>Dr. Kashif Saeed</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: kashif.saeed@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/abdul majid.webp"  alt="Mr. Abdul Majid" loading="lazy">
+                 <h3>Mr. Abdul Majid</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: abdul.majid@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/beenish fatima.webp"  alt="Ms. Beenish Fatima" loading="lazy">
+                 <h3>Ms. Beenish Fatima</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: beenish.fatima@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/haris mujtaba.webp"  alt="Mr. Haris Mujtaba" loading="lazy">
+                 <h3>Mr. Haris Mujtaba</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: haris.kazmi@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/mohsin yousaf.webp"  alt="r. Mohsin Yousaf" loading="lazy">
+                 <h3>r. Mohsin Yousaf</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: mohsin.yousuf@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/shazia haque.webp"  alt="Ms. Shazia Haque" loading="lazy">
+                 <h3>Ms. Shazia Haque</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: shazia.haque@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/tamania javed.webp"  alt="Ms. Tamania Javed" loading="lazy">
+                 <h3>Ms. Tamania Javed</h3>
+                 <p>Assistant Professor</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: tamania.javaid@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/ahmad hamza nayyar.webp"  alt="Mr. Ahmad Hamza Nayyar" loading="lazy">
+                 <h3>Mr. Ahmad Hamza Nayyar</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: ahmad.hamza@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/akbare yaqub.webp"  alt="Ms. Akbare Yaqub" loading="lazy">
+                 <h3>Ms. Akbare Yaqub</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: akbari.yaqoob@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/aroosa umair.webp"  alt="Ms. Aroosa Umair" loading="lazy">
+                 <h3>Ms. Aroosa Umair</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: aroosa.umair@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/hamza yousaf.webp"  alt="Mr. Hamza Yousaf" loading="lazy">
+                 <h3>Mr. Hamza Yousaf</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: hamza.yousuf@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/sara kiran.webp"  alt="Ms. Sara Kiran" loading="lazy">
+                 <h3>Ms. Sara Kiran</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: sara.kiran@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/syed maaz ahmed rizvi.webp"  alt="Mr. Syed Maaz Ahmed Rizvi" loading="lazy">
+                 <h3>Mr. Syed Maaz Ahmed Rizvi</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: maaz.ahmed@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/syed muhammad ismail.webp"  alt="Mr. Syed Muhammad Ismail" loading="lazy">
+                 <h3>Mr. Syed Muhammad Ismail</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: muhammad.ismail@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/umer altaf.webp"  alt="Mr. Umer Altaf" loading="lazy">
+                 <h3>Mr. Umer Altaf</h3>
+                 <p>Lecturer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: umer.altaf@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+              <img src="../assets/faculty images/EE Faculty/eisha khan.webp"  alt="Ms. Eisha Khan" loading="lazy">
+                 <h3>Ms. Eisha Khan</h3>
+                 <p>Lab Engineer</p>
+                 <p>Office: F-Block, 2nd floor, Room 24</p>
+                 <p class="contact-info">Email: eisha.khan@nu.edu.pk</p>
+             </div>
+             <div class="faculty-card">
+                <img src="../assets/faculty images/EE Faculty/hafiz muhammad muiz malik.webp"  alt="Mr. Hafiz Muhammad Muiz Malik" loading="lazy">
+                   <h3>Mr. Hafiz Muhammad Muiz Malik</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: muiz.malik@nu.edu.pk</p>
+               </div>
+
         </div>
     </div>
+
+    <div class="faculty-container" id="CV">
+        <h1>Faculty Information (Civil Engineering)</h1>
+
+        <div class="faculty-grid" id="facultyGrid">
+            <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. tauqir ahmed.webp"  alt="Dr. Tauqir Ahmed" loading="lazy">
+                   <h3>Dr. Tauqir Ahmed</h3>
+                   <p>Associate Professor & HOD</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: tauqir.ahmed@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. shahid ali.webp"  alt="Dr. Shahid Ali" loading="lazy">
+                   <h3>Dr. Shahid Ali</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: shahid.ali@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. syed ali rizwan bukhari.webp"  alt="Dr. Syed Ali Rizwan Bukhari" loading="lazy">
+                   <h3>Dr. Syed Ali Rizwan Bukhari</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: syed.ali@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. javaid ahmad.webp"  alt="Dr. Javaid Ahmad" loading="lazy">
+                   <h3>Dr. Javaid Ahmad</h3>
+                   <p>Associate Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: Javaid.ahmad@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. waseem mirza.webp"  alt="Dr. Waseem Mirza" loading="lazy">
+                   <h3>Dr. Waseem Mirza</h3>
+                   <p>Associate Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: waseem.mirza@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. muhammad abdullah.webp"  alt="Dr. Muhammad Abdullah" loading="lazy">
+                   <h3>Dr. Muhammad Abdullah</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: abdullah.rana@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/dr. muhammad umar.webp"  alt="Dr. Muhammad Umar" loading="lazy">
+                   <h3>Dr. Muhammad Umar</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: m.umar@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/ali raza khalid.webp"  alt="Mr. Ali Raza Khalid" loading="lazy">
+                   <h3>Mr. Ali Raza Khalid</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: aliraza.khalid@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/sarah asif.webp"  alt="Ms. Sarah Asif" loading="lazy">
+                   <h3>Ms. Sarah Asif</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: sarah.asif@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/umar khan niazi.webp"  alt="Mr. Umar Khan Niazi" loading="lazy">
+                   <h3>Mr. Umar Khan Niazi</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: umar.niazi@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/anns tahir.webp"  alt="Mr. Anns Tahir" loading="lazy">
+                   <h3>Mr. Anns Tahir</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: anns.tahir@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/asim iqbal.webp"  alt="Mr. Asim Iqbal" loading="lazy">
+                   <h3>Mr. Asim Iqbal</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: asim.iqbal@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/asim sharif.webp"  alt="Mr. Asim Sharif" loading="lazy">
+                   <h3>Mr. Asim Sharif</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: asim.sharif@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/fahad haseeb.webp"  alt="Mr. Fahad Haseeb" loading="lazy">
+                   <h3>Mr. Fahad Haseeb</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: fahad.haseeb@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/mahnoor akram.webp"  alt="Ms. Mahnoor Akram" loading="lazy">
+                   <h3>Ms. Mahnoor Akram</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mahnoor.akram@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/muhammad bilal zahid.webp"  alt="Mr. Muhammad Bilal Zahid" loading="lazy">
+                   <h3>Mr. Muhammad Bilal Zahid</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: bilal.zahid@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/abdul rehman zahid.webp"  alt="Mr. Abdur Rehman Zahid" loading="lazy">
+                   <h3>Mr. Abdur Rehman Zahid</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: bdur.rehman@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/abu huraira.webp"  alt="Mr. Abu Huraira" loading="lazy">
+                   <h3>Mr. Abu Huraira</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: abu.huraira@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/hamza ali.webp"  alt="Mr. Hamza Ali" loading="lazy">
+                   <h3>Mr. Hamza Ali</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hamza.ali@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/m umer amin khan.webp"  alt="Mr. M. Umer Amin Khan" loading="lazy">
+                   <h3>Mr. M. Umer Amin Khan</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: umer.amin@nu.edu.pk</p>
+               </div>
+               <div class="faculty-card">
+                <img src="../assets/faculty images/CV Faculty/maham akram.webp"  alt="Ms. Maham Akram" loading="lazy">
+                   <h3>Ms. Maham Akram</h3>
+                   <p>Lab Engineer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: maham.akram@nu.edu.pk</p>
+               </div>
+
+        </div>
+    </div>
+
+    
+    <div class="faculty-container" id="M">
+        <h1>Faculty Information (School of Management)</h1>
+
+        <div class="faculty-grid" id="facultyGrid">
+
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. hamid hassan.webp"  alt="Dr. Hamid Hassan" loading="lazy">
+                   <h3>Dr. Hamid Hassan</h3>
+                   <p>Professor & HOD</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hamid.hassan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. akbar azam.webp"  alt="Dr. Akbar Azam" loading="lazy">
+                   <h3>Dr. Akbar Azam</h3>
+                   <p>Associate Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: akbar.azam@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. amna farrukh.webp"  alt="Dr. Amna Farrukh" loading="lazy">
+                   <h3>Dr. Amna Farrukh</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: amna.farrukh@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. brig mujahid hussain.webp"  alt="Dr. Brig Mujahid Hussain" loading="lazy">
+                   <h3>Dr. Brig Mujahid Hussain</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mujahid.hussain@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. fatima omer.webp"  alt="Dr. Fatima Omer" loading="lazy">
+                   <h3>Dr. Fatima Omer</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: fatima.omer@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. komal kamran.webp"  alt="Dr. Komal Kamran" loading="lazy">
+                   <h3>Dr. Komal Kamran</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: omal.kamran@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. mian muhammad atif.webp"  alt="Dr. Mian Muhammad Atif" loading="lazy">
+                   <h3>Dr. Mian Muhammad Atif</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mian.atif @nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. munazza saeed.webp"  alt="Dr. Munazza Saeed" loading="lazy">
+                   <h3>Dr. Munazza Saeed</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: munazza.saeed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. umer iqbal.webp"  alt="Dr. Umer Iqbal" loading="lazy">
+                   <h3>Dr. Umer Iqbal</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: umer.iqbal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/dr. zia khan.webp"  alt="Dr. Zia Khan" loading="lazy">
+                   <h3>Dr. Zia Khan</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: zia.khan@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/aamer allaudin.webp"  alt="Mr. Aamer Allauddin" loading="lazy">
+                   <h3>Mr. Aamer Allauddin</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: allauddin@gmail.com</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/shakeel ahmad.webp"  alt="Mr. Shakeel Ahmad" loading="lazy">
+                   <h3>Mr. Shakeel Ahmad</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: shakeel.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/aroosa safdar.webp"  alt="Ms. Aroosa Safdar" loading="lazy">
+                   <h3>Ms. Aroosa Safdar</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: aroosa.safdar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/ayesha arshad.webp"  alt="Ms. Ayesha Arshad" loading="lazy">
+                   <h3>Ms. Ayesha Arshad</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: ayesha.arshad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/beenish arshad.webp"  alt="Ms. Beenish Arshad" loading="lazy">
+                   <h3>Ms. Beenish Arshad</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: beenish.arshad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/fatima habib.webp"  alt="Ms. Fatima Habib" loading="lazy">
+                   <h3>Ms. Fatima Habib</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: fatima.habib@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/irma tariq.webp"  alt="Ms. Irma Tariq" loading="lazy">
+                   <h3>Ms. Irma Tariq</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: irma.tariq@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/khadija aslam.webp"  alt="Ms. Khadija Aslam" loading="lazy">
+                   <h3>Ms. Khadija Aslam</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: khadija.aslam@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/muhammad mobeen ajmal.webp"  alt="Mr. Muhammad Mobeen Ajmal" loading="lazy">
+                   <h3>Mr. Muhammad Mobeen Ajmal</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mobeen.ajmal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/noor zahid.webp"  alt="Ms. Noor Zahid" loading="lazy">
+                   <h3>Ms. Noor Zahid</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: noor.zahid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/salmaan khalil rahman.webp"  alt="Mr. Salmaan Khalil Rahman" loading="lazy">
+                   <h3>Mr. Salmaan Khalil Rahman</h3>
+                   <p>Adjunct Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: salmaan.rahman@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/sidra salman.webp"  alt="Ms. Sidra Salman" loading="lazy">
+                   <h3>Ms. Sidra Salman</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: sidra.salman@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/sundas munir.webp"  alt="Ms. Sundas Munir" loading="lazy">
+                   <h3>Ms. Sundas Munir</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: sundas.munir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/fatima zeb.webp"  alt="Ms. Fatima Zeb" loading="lazy">
+                   <h3>Ms. Fatima Zeb</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: fatima.zeb@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/ghulam fatima.webp"  alt="Ms. Ghulam Fatima" loading="lazy">
+                   <h3>Ms. Ghulam Fatima</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: ghulam.fatima@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/iman ilyas.webp"  alt="Ms. Iman Ilyas" loading="lazy" loading="lazy">
+                   <h3>Ms. Iman Ilyas</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: iman.ilyas@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/syeda fatima naqvi.webp"  alt="Ms. Syeda Fatima Naqvi" loading="lazy">
+                   <h3>Ms. Syeda Fatima Naqvi</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: fatima.naqvi@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/M Faculty/aiza aftab.webp"  alt="Ms. Aiza Aftab" loading="lazy">
+                   <h3>Ms. Aiza Aftab</h3>
+                   <p>Junior Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: aiza.aftab@nu.edu.pk </p>
+            </div>
+          
+               
+        </div>
+    </div>
+
+    
+    
+    <div class="faculty-container" id="SH">
+        <h1>Faculty Information (Science & Humanities)</h1>
+
+        <div class="faculty-grid" id="facultyGrid">
+            
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. mubashir qayyum.webp"  alt="Dr. Mubashir Qayyum" loading="lazy">
+                   <h3>Dr. Mubashir Qayyum</h3>
+                   <p>Professor & HOD</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mubashir.qayyum@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. akhlaq ahmad bhatti.webp"  alt="Dr. Akhlaq Ahmad Bhatti" loading="lazy">
+                   <h3>Dr. Akhlaq Ahmad Bhatti</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: akhlaq.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. mazhar hussain.webp"  alt="Dr. Mazhar Hussain" loading="lazy">
+                   <h3>Dr. Mazhar Hussain</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mazhar.hussain@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. saman shahid.webp"  alt="Dr. Saman Shahid" loading="lazy">
+                   <h3>Dr. Saman Shahid</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: saman.shahid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. summaira sarfraz.webp"  alt="Dr. Summaira Sarfraz" loading="lazy">
+                   <h3>Dr. Summaira Sarfraz</h3>
+                   <p>Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: sumaira.sarfraz@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. farasat shamir.webp"  alt="Dr. Farasat Shamir" loading="lazy">
+                   <h3>Dr. Farasat Shamir</h3>
+                   <p>Associate Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: farasat.shamir@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. saeeda zia.webp"  alt="Dr. Saeeda Zia" loading="lazy">
+                   <h3>Dr. Saeeda Zia</h3>
+                   <p>Associate Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: saeeda.zia@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. hina firdous.webp"  alt="Dr. Hina Firdous" loading="lazy">
+                   <h3>Dr. Hina Firdous</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hina.firdous@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. hira iqbal.webp"  alt="Dr. Hira Iqbal" loading="lazy">
+                   <h3>Dr. Hira Iqbal</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hira.iqbal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. iram amjad.webp"  alt="Dr. Iram Amjad" loading="lazy">
+                   <h3>Dr. Iram Amjad</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: iram.amjad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. muhammad tahir rashid.webp"  alt="Dr. Muhammad Tahir Rashid" loading="lazy">
+                   <h3>Dr. Muhammad Tahir Rashid</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: tahir.rashid@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. tayyaba naz.webp"  alt="Dr. Tayyaba Naz" loading="lazy">
+                   <h3>Dr. Tayyaba Naz</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: tayyaba.naz@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/dr. zahida mansoor.webp"  alt="Dr. Zahida Mansoor" loading="lazy">
+                   <h3>Dr. Zahida Mansoor</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: zahida.mansoor@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/hajira ikram butt.webp"  alt="Ms. Hajira Ikram Butt" loading="lazy">
+                   <h3>Ms. Hajira Ikram Butt</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hajra.ikram@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/zulfiqar ali.webp"  alt="Mr. Zulfiqar Ali" loading="lazy">
+                   <h3>Mr. Zulfiqar Ali</h3>
+                   <p>Assistant Professor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: ali.zulfiqar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/abdul sattar.webp"  alt="Mr. Abdul Sattar" loading="lazy">
+                   <h3>Mr. Abdul Sattar</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: abdul.sattar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/aisha bano.webp"  alt="Ms. Aisha Bano" loading="lazy">
+                   <h3>Ms. Aisha Bano</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: aisha.bano@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/aqsa naz.webp"  alt="Ms. Aqsa Naz" loading="lazy">
+                   <h3>Ms. Aqsa Naz</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: aqsa.naz@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/ayesha saeed.webp"  alt="Ms. Ayesha Saeed" loading="lazy">
+                   <h3>Ms. Ayesha Saeed</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: ayesha.saeed@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/hafiz hamza janjua.webp"  alt="Mr. Hafiz Hamza Janjua" loading="lazy">
+                   <h3>Mr. Hafiz Hamza Janjua</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: hamza.janjua@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/hafiz umair gulzar.webp"  alt="Mr. Hafiz Umair Gulzar" loading="lazy">
+                   <h3>Mr. Hafiz Umair Gulzar</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: umair.gulzar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/iqra rafiq.webp"  alt="Ms. Iqra Rafiq" loading="lazy">
+                   <h3>Ms. Iqra Rafiq</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: iqra.rafiq@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/kanwal saleem.webp"  alt="Ms. Kanwal Saleem" loading="lazy">
+                   <h3>Ms. Kanwal Saleem</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: kanwal.saleem@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/muhammad yaseen.webp"  alt="Mr. Muhammad Yaseen" loading="lazy">
+                   <h3>Mr. Muhammad Yaseen</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: m.yaseen@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/namra fazal.webp"  alt="Ms. Namra Fazal" loading="lazy">
+                   <h3>Ms. Namra Fazal</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: namra.fazal@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/nokhaiz zahra.webp"  alt="Ms. Nokhaiz Zahra" loading="lazy">
+                   <h3>Ms. Nokhaiz Zahra</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: nokhaiz.zahra@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/razm-ul-zafar.webp"  alt="Mr. Razm-ul-Zafar" loading="lazy">
+                   <h3>Mr. Razm-ul-Zafar</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: razm.zafar@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/rubab arshad.webp"  alt="Ms. Rubab Arshad" loading="lazy">
+                   <h3>Ms. Rubab Arshad</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: rubab.arshad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/sarah ahmad.webp"  alt="Ms. Sarah Ahmad" loading="lazy">
+                   <h3>Ms. Sarah Ahmad</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: Sarah.ahmad@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/tasaduque hussain shah.webp"  alt="Mr. Tasaduque Hussain Shah" loading="lazy">
+                   <h3>Mr. Tasaduque Hussain Shah</h3>
+                   <p>Lecturer</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: tasduque.hussain@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/mahnoor chaudhry.webp"  alt="Ms. Mahnoor Chaudhry" loading="lazy">
+                   <h3>Ms. Mahnoor Chaudhry</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: mahnoor.chaudhary@nu.edu.pk</p>
+            </div>
+            <div class="faculty-card">
+                <img src="../assets/faculty images/S&H Faculty/rida ahmed.webp"  alt="Ms. Rida Ahmed" loading="lazy">
+                   <h3>Ms. Rida Ahmed</h3>
+                   <p>Instructor</p>
+                   <p>Office: F-Block, 2nd floor, Room 24</p>
+                   <p class="contact-info">Email: rida.ahmed@nu.edu.pk</p>
+            </div>
+
+        </div>
+    </div>     
+
     <script src="../assets/js/faculty.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/footer.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<div class="footer-div">
+    <footer class="ct-footer">
+        <div class="footer-container">
+
+
+            <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+                <div class="ct-footer-pre text-center-lg">
+                    <div class="inner">
+                        <span>Join WebCorpCo to receive updates, news &amp; events!</span>
+                    </div>
+                    <div class="inner">
+                        <div class="form-group">
+                            <input name="formfields[nl_email]" id="nl_email" class="validate[required]"
+                                placeholder="Enter your email address" type="text" value=""> <label for="nl_email"
+                                class="sr-only">Email Address</label> <button type="submit"
+                                class="btn btn-motive">Join</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+            <ul class="ct-footer-list text-center-sm">
+                <li>
+                    <h2 class="ct-footer-list-header">
+                        Learn More
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">Company</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Clients</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">News</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Careers</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="ct-footer-list-header">
+                        Services
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">Design</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Marketing</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Sales</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Programming</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Support</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="ct-footer-list-header">
+                        The Industry
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">Thought Leadership</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Webinars</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Events</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Sponsorships</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Advisors</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Training Program</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Activities &amp; Campaigns</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="ct-footer-list-header">
+                        Public Relations
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">WebCorpCo Blog</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Hackathons</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Videos</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">News Releases</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Newsletters</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="ct-footer-list-header">
+                        About
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Our Board</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Our Staff</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Contact Us</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div class="ct-footer-meta text-center-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-2">
+                        <img alt="logo" src="../assets/footer-images/logo.webp">
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <address>
+                            <span>WebCorpCo<br></span>123 Easy Street<br>
+                            Orlando, Florida, 32801<br>
+                            <span>Phone: <a href="tel:5555555555">(555) 555-8899</a></span>
+                        </address>
+                    </div>
+                    <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+                        <a href="" target="_blank" class="footer-a"><img alt="app store" src="../assets/footer-images/appstore.webp"></a>
+                    </div>
+                    <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+                        <a href="" target="_blank" class="footer-a"><img alt="google play store"
+                                src="../assets/footer-images/androidstore.webp"></a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <ul class="ct-socials list-unstyled list-inline">
+                            <li>
+                                <a href="" target="_blank" class="footer-a"><img alt="facebook"
+                                        src="../assets/footer-images/facebook-white.webp"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="footer-a"><img alt="twitter"
+                                        src="../assets/footer-images/twitter-white.webp"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="footer-a"><img alt="youtube"
+                                        src="../assets/footer-images/youtube-white.webp"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="footer-a"><img alt="instagram"
+                                        src="../assets/footer-images/instagram-white.webp"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="footer-a"><img alt="pinterest"
+                                        src="../assets/footer-images/pinterest-white.webp"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ct-footer-post">
+            <div class="container">
+                <div class="inner-left">
+                    <ul>
+                        <li>
+                            <a href="" class="footer-a">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">News</a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-a">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inner-right">
+                    <p>
+                        Copyright © 2016 WebCorpCo.&nbsp;<a href="">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a class="ct-u-motive-color" href="" target="_blank" class="footer-a">Web Design</a> by
+                        DigitalUs on
+                        <a href="" target="_blank">Solodev CMS</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+</div>
+
+
+    
 </body>
 
 </html>
