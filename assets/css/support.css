@@ -376,7 +376,7 @@ body {
   }
 
   .card {
-    width: 95%; /* Increase width to make it slightly wider */
+    /* width: 95%; Increase width to make it slightly wider */
     max-width: 350px; /* Adjust max-width to fit your design */
     margin-right: 5%;
   }
