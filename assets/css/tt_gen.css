@@ -1,59 +1,105 @@
-.table{
+/* General Styles */
+body {
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.table {
     text-align: center;
     margin-left: 5%;
     width: 90%;
 }
 
-.btn{
+.btn {
     margin-bottom: 30px;
 }
 
-.center-align{
-    width:50%;
+.center-align {
+    width: 50%;
     margin: auto;
 }
 
-.container{
+.container {
     margin-bottom: 20px;
 }
 
-.columnBox{
+.columnBox {
     background-color: rgb(101, 112, 122);
     border-color: rgb(101, 112, 122);
 }
 
-h1{
-    text-align: center;
-    padding: 40px 40px 10px 40px;
-}
-
-h3{
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-th{
+th {
     width: 10%;
 }
 
-td{
+td {
     white-space: pre-wrap;
 }
 
-body{
-    width: 100%;
-    background-color:whitesmoke;
-}
-
-#sCol{
+#sCol {
     white-space: nowrap;
     background-color: cadetblue;
     border-color: cadetblue;
 }
 
-#sRow{
+#sRow {
     white-space: nowrap;
     background-color: cadetblue;
     border-color: cadetblue;
     color: rgb(33, 37, 41);
+}
+
+/* Media Queries */
+
+/* Tablets and larger */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .center-align {
+        width: 70%; 
+    }
+
+    .table {
+        width: 95%; 
+        margin-left: 2.5%;
+    }
+
+    th {
+        width: auto; 
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+    h1, h3 {
+        padding: 20px 10px 5px 10px; 
+    }
+
+    .center-align {
+        width: 90%; 
+        margin: 0 auto;
+    }
+
+    .table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        width: auto; 
+        white-space: normal; 
+    }
+
+    .btn {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
 }
