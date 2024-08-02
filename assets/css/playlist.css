@@ -478,7 +478,7 @@ p {
     max-width: 1300px; 
     width: 100%; 
     border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     margin-top: 85px;
     margin-left: auto;
     margin-right: auto;
@@ -493,6 +493,7 @@ p {
 .intro-section p {
     font-size: 1.2em; 
 }
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -557,15 +558,15 @@ p {
     margin-top: 10px;
     background-color: #ffffff; 
     padding: 20px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 /* Course Card */
 .course-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 0.000001px ridge #c6d3f7; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     flex: 1 1 calc(33.333% - 20px); 
     max-width: calc(33.333% - 20px); 
@@ -640,11 +641,13 @@ p {
     margin-top: 15px;
 }
 /* Watch Tags */
-.watch-time {
-    font-size: 0.9em;
+.channel-name {
+    font-size: 1.0em;
     color: #777;
 }
-.watch-time i {
+.channel-name {
+    margin-top: -4px;
+    margin-bottom: 5px;
     margin-right: 5px;
     font-weight: normal;
   }
@@ -654,6 +657,7 @@ p {
     font-size: 0.9em;
     color: #777;
     margin-right: 15px;
+    margin-bottom: -47px;
 }
 .students i {
     font-weight: normal;

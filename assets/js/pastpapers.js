@@ -98,6 +98,7 @@ const items = [
     { heading: "Theory of Programming Languages", para: "The Theory of Programming Languages examines the design, implementation, analysis, and classification of programming languages. It explores syntax, semantics, and the theory behind language constructs and their execution", link: "https://drive.google.com/drive/folders/1kOwzRLOAmrm4Y9hYlxcSZsxbLxG4SFKz?usp=drive_link", rating: 4.5, badge: 'hard' },
     { heading: "Web Engineering", para: "Web engineering is the process of designing, building, and maintaining web applications and systems. It encompasses various skills and technologies, including programming languages, databases, user experience design, and security", link: "https://drive.google.com/drive/folders/1j_ifKY4Krcjly0MDHE3hr9g087iwkGxO?usp=drive_link", rating: 4.5, badge: 'hard' },
     { heading: "Web Programming", para: "Web programming involves creating web pages, web applications, and other online content that can be displayed in a web browser. Web programming is accomplished using a variety of programming languages, including HTML, CSS, JavaScript, PHP, Python, Ruby, and Java.", link: "https://drive.google.com/drive/folders/1Xcu8Q4GJlvcKKdyaHYXkolqJAD1n7dzv?usp=drive_link", rating: 4.5, badge: 'hard' },
+
 ];
 
 let currentIndex = 0;
@@ -138,23 +139,20 @@ function createDivs(count) {
         button.className = 'item-button';
         div.appendChild(button);
 
-        // Add rating stars and text inside the div item
-        if (items[currentIndex].rating !== undefined) {
-            const ratingDiv = document.createElement('div');
-            ratingDiv.className = 'rating';
+// Add rating button inside the div item
+if (items[currentIndex].rating !== undefined) {
+    const ratingDiv = document.createElement('div');
+    ratingDiv.className = 'rating';
 
-            const stars = document.createElement('span');
-            stars.className = 'stars';
-            stars.innerHTML = `${'★'.repeat(Math.floor(items[currentIndex].rating))}${'☆'.repeat(5 - Math.floor(items[currentIndex].rating))}`;
-            ratingDiv.appendChild(stars);
+    const ratingButton = document.createElement('a');
+    ratingButton.className = 'rating-button';
+    ratingButton.href = items[currentIndex].ratingLink; // Replace with your rating link
+    ratingButton.textContent = 'YouTube Playlist';
+    ratingDiv.appendChild(ratingButton);
 
-            const ratingText = document.createElement('span');
-            ratingText.className = 'rating-value';
-            ratingText.textContent = `${items[currentIndex].rating}/5`;
-            ratingDiv.appendChild(ratingText);
+    div.appendChild(ratingDiv);
+}
 
-            div.appendChild(ratingDiv);
-        }
 
         container.appendChild(div);
         currentIndex++;
