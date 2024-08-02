@@ -1,49 +1,313 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Comprehension Lab</title>
-    <link rel="stylesheet" href="/html/Papers/papers.css">
+
+    <!--=============== ICONS & SYMBOLS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!--=============== CSS & JS ===============-->
+    <link rel="stylesheet" href="/assets/css/papers.css" />
+
+    <title>ECC Lab</title>
+
 </head>
 
-<body>
+ <body> 
+ <!--=============== NAVBAR ===============-->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="#" class="nav__logo">
+          <i class="ri-code-s-slash-line"></i> Campus +
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+
+          <li id="li-login">
+            <a href="#" class="nav__link" style=" font-size: medium">Log In</a>
+          </li>
+          <li id="li-signup">
+            <a href="#" class="nav__link" style=" font-size: small">Sign Up</a>
+          </li>
 
 
-    <div class="container">
+          <!--=============== Past Papers ===============-->
+          <li>
+            <a href="#" class="nav__link" style=" font-size: medium">Past Papers</a>
+          </li>
+
+          <!--=============== Services ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-heart-3-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">Most Viewed Past Papers</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Data Structures (DS)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Calculus (Cal)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Theory of Automata (TOA)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Assembly Language (COAL)</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-newspaper-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">News & Events</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">FDC X</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">SOFTEC '24</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">GDSC Hiring Candidates?</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Change in HoD</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-home-smile-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">Accessibility</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Time Table Generator</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Faculty Information</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">To Do List</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-file-paper-2-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">Youtube Playlists</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Abdul Bari (Algorithms)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Neso Academy (DLD)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Code with Harry (PF)</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Brain Molder (Database)</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--=============== Calculators ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Calculators <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class="ri-table-line"></i>
+                  </div>
+                  <a href="/html/calculator.html" class="dropdown__title">Aggregate Calculator</a>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class=" ri-number-4"></i>
+                  </div>
+                  <a href="/html/calculator.html" class="dropdown__title">GPA Calculator</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!--=============== Forum ===============-->
+          <li>
+            <a href="#" class="nav__link" style=" font-size: medium">Forum</a>
+          </li>
+
+          <!--=============== Student Support ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link dropdown__button">
+              Student Support
+              <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <div class="dropdown__container">
+              <div class="dropdown__content">
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class=" ri-article-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">Blogs</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">Quantum Computing</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Psychology</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Data Science</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Sports</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Technology</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class=" ri-question-answer-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">Frequently Asked Questions</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">General Queries</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Admission Related Queries</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Finding Go-To Person</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Technical Queries</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Others</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="dropdown__group">
+                  <div class="dropdown__icon">
+                    <i class=" ri-question-line"></i>
+                  </div>
+
+                  <span class="dropdown__title">About Us</span>
+
+                  <ul class="dropdown__list">
+                    <li>
+                      <a href="#" class="dropdown__link">About How & Why!</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">About MultiDexters</a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown__link">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      </div>
+
+      <div class="nav__actions">
+        <a class="navbar-login">Log In</a>
+        <a class="navbar-signup">Sign Up</a>
+
+      </div>
+
+
+    </nav>
+  </header>
+
+   <main>
+
+    <div class="pp_container">
         <div class="section" id="course-outline">
             <h2>Course Outline</h2>
-            <ul>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2020 - Course
-                        Outline - Fall - Cal</a></li>
-            </ul>
+           <p>
+               Updating Soon !!
+           </p>
         </div>
         <div class="section" id="past-papers">
             <h2>Past Papers</h2>
             <ul>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2015 - Final - Fall
-                        - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2016 - Final - Fall
-                        - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2020 - Final - Fall
-                        - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2020 - Midterm 2 -
-                        Fall - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2021 - Final - Fall
-                        - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2021 - Midterm 2 -
-                        Fall - Cal</a></li>
+          <li><a href="https://drive.google.com/file/d/1OTkcnQKFnm2hvjGZdbNAxRI6AVXUE7R5/view?usp=drive_link"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Lab Mid 2023 </a></li>
+          <li><a href="https://drive.google.com/file/d/1_TlYY5ZzEQ9u4tMhXF8vfkjbamDMOMTQ/view?usp=drive_link"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Lab Final 2023</a></li>
+          <li><a href="https://drive.google.com/file/d/1EH5fZnTUOLkidY6CfKLahpCnbHSRTSBT/view?usp=drive_link"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Lab Mid 2021</a></li>
+          <li><a href="https://drive.google.com/file/d/1HcZkTq5VuI8bRDaeMQeXEaEJrf0dUn_z/view?usp=drive_link"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Lab Final 2021</a></li>
             </ul>
         </div>
         <div class="section" id="quizzes">
             <h2>Quizzes</h2>
             <p>No links in Quizzes</p>
         </div>
-        <div class="section" id="assignments">
-            <h2>Assignments</h2>
-            <p>No links in Assignments</p>
-        </div>
+        
         <div class="section" id="lab-tasks">
             <h2>Lab Tasks</h2>
             <p>No links in Lab Tasks</p>
@@ -52,20 +316,15 @@
             <h2>Books</h2>
             <p>No links in Books</p>
         </div>
-        <div class="section" id="others">
-            <h2>Others</h2>
-            <ul>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Cheat Sheet -
-                        Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Formulas of
-                        Derivatives - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Formulas of
-                        Integration - Cal</a></li>
-                <li><a href="#"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Inequalities -
-                        Cal</a></li>
-            </ul>
-        </div>
+        
     </div>
+
+   </main>
+    <!--=============== ICONS ===============-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 
 </html>
