@@ -1,8 +1,8 @@
 const items = [
-    { heading: "Operating Systems (OS)", para: "This is a paragraph for item 1. This is a paragraph for item 1. This is a paragraph for item 1. This is a paragraph for item 1.", link: "page1.html", rating: 5.0, badge: 'easy' },
+    { heading: "Applied Physics", para: "Applied Physics explores the practical application of physical principles to develop new technologies and solve real-world problems.", link: "../html/papers/aphy.html", rating: 5.0, badge: 'easy' },
     { heading: "Design & Analysis of Algorithms (DAA)", para: "This is a paragraph for item 2. This is a paragraph for item 2. This is a paragraph for item 2. This is a paragraph for item 2.", link: "page2.html", rating: 4.2, badge: 'medium' },
     { heading: "Data Structures (DS)", para: "This is a paragraph for item 3. This is a paragraph for item 3. This is a paragraph for item 3. This is a paragraph for item 3.", link: "page3.html", rating: 3.9, badge: 'hard' },
-    { heading: "Heading 4", para: "This is a paragraph for item 4.", link: "page4.html", rating: 4.5, badge: 'easy' },
+    { heading: "Heading 4", para: "This is a paragraph for item 4.", link: "page4.html", link: "youtube.com", badge: 'easy' },
     { heading: "Heading 5", para: "This is a paragraph for item 5.", link: "page5.html", rating: 4.5, badge: 'medium' },
     { heading: "Heading 6", para: "This is a paragraph for item 6.", link: "page6.html", rating: 4.5, badge: 'hard' },
     { heading: "Heading 7", para: "This is a paragraph for item 7.", link: "page7.html", rating: 4.5, badge: 'easy' },
@@ -63,23 +63,20 @@ function createDivs(count) {
         button.className = 'item-button';
         div.appendChild(button);
 
-        // Add rating stars and text inside the div item
-        if (items[currentIndex].rating !== undefined) {
-            const ratingDiv = document.createElement('div');
-            ratingDiv.className = 'rating';
+// Add rating button inside the div item
+if (items[currentIndex].rating !== undefined) {
+    const ratingDiv = document.createElement('div');
+    ratingDiv.className = 'rating';
 
-            const stars = document.createElement('span');
-            stars.className = 'stars';
-            stars.innerHTML = `${'★'.repeat(Math.floor(items[currentIndex].rating))}${'☆'.repeat(5 - Math.floor(items[currentIndex].rating))}`;
-            ratingDiv.appendChild(stars);
+    const ratingButton = document.createElement('a');
+    ratingButton.className = 'rating-button';
+    ratingButton.href = items[currentIndex].ratingLink; // Replace with your rating link
+    ratingButton.textContent = 'YouTube Playlist';
+    ratingDiv.appendChild(ratingButton);
 
-            const ratingText = document.createElement('span');
-            ratingText.className = 'rating-value';
-            ratingText.textContent = `${items[currentIndex].rating}/5`;
-            ratingDiv.appendChild(ratingText);
+    div.appendChild(ratingDiv);
+}
 
-            div.appendChild(ratingDiv);
-        }
 
         container.appendChild(div);
         currentIndex++;
