@@ -570,8 +570,8 @@ a {
 .pp-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    width: 90%;
+    gap: 25px;
+    width: 97%;
     margin: 0 auto;
     margin-top: 2%;
 }
@@ -582,7 +582,7 @@ a {
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    width: 96%;
+    width: 97%;
     height: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -607,14 +607,14 @@ a {
 }
 
 .pp-container .item h2 {
-    font-size: 30px;
+    font-size: 25px;
     color: #333;
     margin: -10% auto 0% auto;
-    width: 80%;
+    width: 87.85%; 
     text-align: left;
-    font-weight: 600;
+    font-weight: 550;
     margin-left: 6%;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 }
 
 .pp-container .item p {
@@ -695,11 +695,11 @@ a {
 
 .pp-container .item .badge {
     position: absolute;
-    top: 18px;
+    top: 8px;
     right: 22px;
     background-color: #000;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;

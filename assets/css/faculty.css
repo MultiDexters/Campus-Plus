@@ -547,5 +547,166 @@ html {
     
 }
 
+/* Media Query for small devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .nav__menu {
+        margin-left: 0;
+    }
+
+    .schools-container {
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        row-gap: 8px;
+    }
+    .faculty-card {
+        width: 80%;
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .search-bar{
+        margin-top: 0px;
+    }
+    .search-bar input {
+        width: 90%;
+        margin-left: 0px;
+        align-items: center;
+    }
+    .School-name{
+        margin-top: 85px;
+        max-width: 100%;
+      font-size: auto; 
+      font-weight: 600; 
+    }
+ 
+    .faculty-container h1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: 4px;
+        background-color: #004494;
+    }
+    .header{
+        height: 65px;
+    }
+    .nav__data{
+        margin-top: 8px;
+    }
+    .nav__actions{
+        margin-top: 4px;
+    }
+}
+/* Media Query for tablets (min-width: 601px) and (max-width: 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .nav__menu {
+        margin-left: -10%;
+    }
+    .header{
+        height: 65px;
+    }
+    .nav__data{
+        margin-top: 6px;
+    }
+    .nav__actions{
+        margin-top: 6px;
+    }
+
+    .schools-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 65px ;
+        margin-left: auto;
+        margin-right: auto;
+        row-gap: 10px;
+        column-gap: 4px;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .faculty-card {
+        width: calc(44% - 20px);
+        max-width: calc(40%);
+        height: auto;
+        box-sizing: border-box; 
+    }
+    .search-bar{
+        margin-top: 0px;
+    }
+    .search-bar input {
+        width: 70%;
+    }
+}
+
+/* Media Query for devices (min-width: 1025px) and (max-width: 1800px) */
+@media screen and (min-width: 1025px) and (max-width: 1800px) {
+    .nav__menu {
+        margin-left: -5%;
+    }
+
+    .header {
+        height: 70px;
+    }
+
+    .nav__data {
+        margin-top: 4px;
+    }
+
+    .nav__actions {
+        margin-top: 4px;
+    }
+
+    .schools-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        row-gap: 15px;
+        column-gap: 5px;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .faculty-card {
+        width: calc(30% - 20px);
+        max-width: calc(30%);
+        height: auto;
+        box-sizing: border-box; 
+    }
+
+    .search-bar {
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 60%;
+    }
+
+    .School-name {
+        margin-top: 90px;
+        max-width: 100%;
+        font-size: 35px; 
+        font-weight: 600; 
+    }
+
+    .faculty-container h1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: 4px;
+        background-color: #004494;
+    }
+}
 
 
