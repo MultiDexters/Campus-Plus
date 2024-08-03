@@ -5,17 +5,291 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Programming</title>
-    <link rel="stylesheet" href="/html/Papers/papers.css">
+  <link rel="stylesheet" href="/assets/css/papers.css">
+     <!--=============== ICONS & SYMBOLS ===============-->
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+  <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
 </head>
 
 <body>
 
+    
+    <!--=============== NAVBAR ===============-->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav__data">
+      <a href="#" class="nav__logo">
+        <i class="ri-code-s-slash-line"></i> Campus +
+      </a>
 
-    <div class="container">
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line nav__toggle-menu"></i>
+        <i class="ri-close-line nav__toggle-close"></i>
+      </div>
+    </div>
+
+    <!--=============== NAV MENU ===============-->
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+
+        <li id="li-login">
+          <a href="../login.html" class="nav__link" style=" font-size: medium">Log In</a>
+        </li>
+        <li id="li-signup">
+          <a href="../login.html" class="nav__link" style=" font-size: small">Sign Up</a>
+        </li>
+
+
+        <!--=============== Past Papers ===============-->
+        <li>
+          <a href="../pastpapers.html" class="nav__link" style=" font-size: medium">Past Papers</a>
+        </li>
+
+        <!--=============== Services ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-heart-3-line"></i>
+                </div>
+
+                <span class="dropdown__title">Most Viewed Past Papers</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="data-stru.html" class="dropdown__link">Data Structures (DS)</a>
+                  </li>
+                  <li>
+                    <a href="cal.html" class="dropdown__link">Calculus (Cal)</a>
+                  </li>
+                  <li>
+                    <a href="ta.html" class="dropdown__link">Theory of Automata (TOA)</a>
+                  </li>
+                  <li>
+                    <a href="coal.html" class="dropdown__link">Assembly Language (COAL)</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-newspaper-line"></i>
+                </div>
+
+                <span class="dropdown__title">News & Events</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">FDC X</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">SOFTEC '24</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">GDSC Hiring Candidates?</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Change in HoD</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-home-smile-line"></i>
+                </div>
+
+                <span class="dropdown__title">Accessibility</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../tt_gen.html" class="dropdown__link">Time Table Generator</a>
+                  </li>
+                  <li>
+                    <a href="../faculty.html" class="dropdown__link">Faculty Information</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">To Do List</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-file-paper-2-line"></i>
+                </div>
+
+                <span class="dropdown__title">Youtube Playlists</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Abdul Bari (Algorithms)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Neso Academy (DLD)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Code with Harry (PF)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Brain Molder (Database)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Calculators ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Calculators <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-table-line"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">Aggregate Calculator</a>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-number-4"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">GPA Calculator</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Forum ===============-->
+        <li>
+          <a href="#" class="nav__link" style=" font-size: medium">Forum</a>
+        </li>
+
+        <!--=============== Student Support ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Student Support
+            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-article-line"></i>
+                </div>
+
+                <span class="dropdown__title">Blogs</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Quantum Computing</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Psychology</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Data Science</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Sports</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Technology</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-answer-line"></i>
+                </div>
+
+                <span class="dropdown__title">Frequently Asked Questions</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">General Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Admission Related Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Finding Go-To Person</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Technical Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Others</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-line"></i>
+                </div>
+
+                <span class="dropdown__title">About Us</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">About How & Why!</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">About MultiDexters</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+
+    <div class="nav__actions">
+      <a class="navbar-login" href="/html/login.html" style="font-size: medium">Log In</a>
+      <a class="navbar-signup" href="/html/login.html" style="font-size: medium">Sign Up</a>
+
+    </div>
+
+
+  </nav>
+</header>
+
+
+
+    <main>
+
+    <div class="pp_container">
         <div class="section" id="course-outline">
             <h2>Course Outline</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/128dP6-5H7-Ow4SZzRbk5C9F87xCKwR9e/view?usp=drive_link"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2023 - Course
+                <li><a href="https://drive.google.com/file/d/128dP6-5H7-Ow4SZzRbk5C9F87xCKwR9e/view?usp=drive_link"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2023 - Course
                         Outline - Fall - WP</a></li>
             </ul>
         </div>
@@ -23,9 +297,9 @@
         <div class="section" id="finals">
             <h2>Finals</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1ZcLhkGKSPrR5w6PFp1UdLvyK7kKMqCls?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Final 2022 </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1Qdw877o9qmZmYzV6rSeGckWx8RYtVgkV?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> WebProgrammingFinals (Best ,Average ,Worst) </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1iTAbgCCbGAom9ozTaCWkM0vFI9murjXZ?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> More Finals </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1ZcLhkGKSPrR5w6PFp1UdLvyK7kKMqCls?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Final 2022 </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1Qdw877o9qmZmYzV6rSeGckWx8RYtVgkV?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> WebProgrammingFinals (Best ,Average ,Worst) </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1iTAbgCCbGAom9ozTaCWkM0vFI9murjXZ?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> More Finals </a></li>
             </ul>
         </div>
         
@@ -33,37 +307,37 @@
         <div class="section" id="mid2">
             <h2>MID 2</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1xCoUVs06K7z3wN1f-nGjOSTHXqrOQ-zE?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Fall 2023 </a></li>   
-                <li><a href="https://drive.google.com/drive/folders/1RI16JnC6kqTIx1nPd4gors6u6iE-Lae7?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Mid 2  </a></li>  
-                <li><a href="https://drive.google.com/drive/folders/1N8eEHJkLpfFQfDlBHO0dP7ngWOaRKljU?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Web Programming Sessional 2 (Best ,Average ,Worst) </a></li>   
-                <li><a href="https://drive.google.com/file/d/1POB2YlEgc3Eh_NB7Lcy6KaoDiszqa1ho/view?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Spring 2018 </a></li>  
-                <li><a href="https://drive.google.com/drive/folders/1n8C-o5k9qvMx1fcCd9CihlbFRemFTdem?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> More Mids </a></li>   
+                <li><a href="https://drive.google.com/drive/folders/1xCoUVs06K7z3wN1f-nGjOSTHXqrOQ-zE?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Fall 2023 </a></li>   
+                <li><a href="https://drive.google.com/drive/folders/1RI16JnC6kqTIx1nPd4gors6u6iE-Lae7?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Mid 2  </a></li>  
+                <li><a href="https://drive.google.com/drive/folders/1N8eEHJkLpfFQfDlBHO0dP7ngWOaRKljU?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Web Programming Sessional 2 (Best ,Average ,Worst) </a></li>   
+                <li><a href="https://drive.google.com/file/d/1POB2YlEgc3Eh_NB7Lcy6KaoDiszqa1ho/view?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Spring 2018 </a></li>  
+                <li><a href="https://drive.google.com/drive/folders/1n8C-o5k9qvMx1fcCd9CihlbFRemFTdem?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> More Mids </a></li>   
             </ul>
         </div>
 
         <div class="section" id="mid1">
             <h2>MID 1</h2>
             <ul>   
-                <li><a href="https://drive.google.com/drive/folders/1xCoUVs06K7z3wN1f-nGjOSTHXqrOQ-zE?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Fall 2023 </a></li>   
-                <li><a href="https://drive.google.com/drive/folders/1zspcicpRaM4W4gQvJxw94ln6oEW8qBSZ?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Mid 1 </a></li> 
-                <li><a href="https://drive.google.com/drive/folders/1Cz3UZWWsUUoHfdms2thFomFv_ZOsHTF2?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Web Programming Sessional 1 (Best ,Average ,Worst)  </a></li>  
-                <li><a href="https://drive.google.com/drive/folders/1n8C-o5k9qvMx1fcCd9CihlbFRemFTdem?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> More Mids </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/1xCoUVs06K7z3wN1f-nGjOSTHXqrOQ-zE?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Fall 2023 </a></li>   
+                <li><a href="https://drive.google.com/drive/folders/1zspcicpRaM4W4gQvJxw94ln6oEW8qBSZ?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Mid 1 </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/1Cz3UZWWsUUoHfdms2thFomFv_ZOsHTF2?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Web Programming Sessional 1 (Best ,Average ,Worst)  </a></li>  
+                <li><a href="https://drive.google.com/drive/folders/1n8C-o5k9qvMx1fcCd9CihlbFRemFTdem?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> More Mids </a></li> 
             </ul>
         </div>
         <!--=============== QUIZ ===============-->
         <div class="section" id="quizzes">
             <h2>Quizzes</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1AIfD34WNLf3K9vU9Ing5Q8_JBOQifV7u?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quizzes </a></li>   
-                <li><a href="https://drive.google.com/drive/folders/1PC1NInYa4p1PK-k3s9y9bdZUSUAp6NOv?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quizzes  (Best ,Average ,Worst)  </a></li>  
+                <li><a href="https://drive.google.com/drive/folders/1AIfD34WNLf3K9vU9Ing5Q8_JBOQifV7u?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quizzes </a></li>   
+                <li><a href="https://drive.google.com/drive/folders/1PC1NInYa4p1PK-k3s9y9bdZUSUAp6NOv?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quizzes  (Best ,Average ,Worst)  </a></li>  
             </ul>
         </div>
 
         <!--=============== ASSIGNMENT ===============-->
-        <div class="section" id="assignments">
+        <div class="section" id="others">
             <h2>Assignments</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1ZBVGuGndxu1r3gfYIwrmTmwwlVZcYSfO?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Assignments </a></li>  
+                <li><a href="https://drive.google.com/drive/folders/1ZBVGuGndxu1r3gfYIwrmTmwwlVZcYSfO?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Assignments </a></li>  
             </ul>
         </div>
 
@@ -71,7 +345,7 @@
         <div class="section" id="lab-tasks">
             <h2>Projects</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/12V0TfTTOpXuHPZGfqJq87cSxkggcDqfD?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Project </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/12V0TfTTOpXuHPZGfqJq87cSxkggcDqfD?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Project </a></li> 
             </ul>
         
         </div>
@@ -80,7 +354,7 @@
         <div class="section" id="books">
             <h2>Books</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1MwYuTpdYqytgoVRJ9un-mHVjg7KQzqKE/view?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Refrence Books </a></li> 
+                <li><a href="https://drive.google.com/file/d/1MwYuTpdYqytgoVRJ9un-mHVjg7KQzqKE/view?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Refrence Books </a></li> 
             </ul>
         </div>
 
@@ -88,14 +362,15 @@
         <div class="section" id="others">
             <h2>Others</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1bq9qwSPaVl2rkZEPVfU8zTRoSJdQ2OZm?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Leture Notes </a></li> 
-                <li><a href="https://drive.google.com/drive/folders/1t6_kREuWAZKGkwVDh-5UZWmbASOdU19a?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Slides </a></li> 
-                <li><a href="https://drive.google.com/drive/folders/1q1vS7rT-RvGR_U8hnbWl2vJxCNwupXbj?usp=drive_link" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Presentation Slides </a></li> 
-                <li><a href="https://docs.google.com/document/d/1FCs1w5QMDSPiXglgqzl-mbbCSnw9qGjk/edit?usp=drive_link&ouid=112397078616739928524&rtpof=true&sd=true" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Course Checklist </a></li> 
-                <li><a href="https://docs.google.com/document/d/1RJyVdSCq0nXumxDkIq4PaFK7VEitN5V3/edit?usp=drive_link&ouid=112397078616739928524&rtpof=true&sd=true" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Course Description </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/1bq9qwSPaVl2rkZEPVfU8zTRoSJdQ2OZm?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Leture Notes </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/1t6_kREuWAZKGkwVDh-5UZWmbASOdU19a?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Slides </a></li> 
+                <li><a href="https://drive.google.com/drive/folders/1q1vS7rT-RvGR_U8hnbWl2vJxCNwupXbj?usp=drive_link" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Presentation Slides </a></li> 
+                <li><a href="https://docs.google.com/document/d/1FCs1w5QMDSPiXglgqzl-mbbCSnw9qGjk/edit?usp=drive_link&ouid=112397078616739928524&rtpof=true&sd=true" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Course Checklist </a></li> 
+                <li><a href="https://docs.google.com/document/d/1RJyVdSCq0nXumxDkIq4PaFK7VEitN5V3/edit?usp=drive_link&ouid=112397078616739928524&rtpof=true&sd=true" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Course Description </a></li> 
             </ul>
         </div>
     </div>
+    </main>
 </body>
 
 </html>
