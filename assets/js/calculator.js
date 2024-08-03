@@ -118,7 +118,7 @@ function generateCourses() {
     const inputGroup = document.createElement("div");
     inputGroup.classList.add("course-input-group");
     inputGroup.innerHTML = `
-        <label for="courseName${i}" style="margin-left:2%">Course Name</label>
+        <label for="courseName${i}" >Course Name</label>
         <input type="text" id="courseName${i}" placeholder="Enter Course Name">
       <label for="creditHours${i}">Credit Hours</label>
       <select id="creditHours${i}">
@@ -127,8 +127,8 @@ function generateCourses() {
         <option value="3">3</option>
         <option value="4">4</option>
       </select>
-      <label for="grade${i}" style="margin-right:1%">Grade</label>
-      <select id="grade${i}" style="margin-right:3%">
+      <label for="grade${i}">Grade</label>
+      <select id="grade${i}">
         <option value="4.00">A/A+</option>
         <option value="3.67">A-</option>
         <option value="3.33">B+</option>
@@ -163,7 +163,7 @@ function generateSemesters() {
     const semesterDiv = document.createElement("div");
     semesterDiv.className = "semester-input-group input-group";
     semesterDiv.innerHTML = `
-          <h3 class="semester-title" style="margin-left:3%">Semester ${i + 1}</h3>
+          <h3 class="semester-title">Semester ${i + 1}</h3>
         <label for="semesterCreditHours${i}">Credit Hours</label>
         <select id="semesterCreditHours${i}">
           <option value="1">1</option>
@@ -172,7 +172,7 @@ function generateSemesters() {
           <option value="4">4</option>
           </select>
         <label for="semesterGPA${i}">GPA</label>
-        <input type="number" id="semesterGPA${i}" step="0.01" placeholder="Enter GPA" style="margin-right:3%">
+        <input type="number" id="semesterGPA${i}" step="0.01" placeholder="Enter GPA">
       `;
     semestersContainer.appendChild(semesterDiv);
   }
