@@ -22,6 +22,265 @@
 
 <body>
 
+<!--=============== NAVBAR ===============-->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav__data">
+      <a href="#" class="nav__logo">
+        <i class="ri-code-s-slash-line"></i> Campus +
+      </a>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line nav__toggle-menu"></i>
+        <i class="ri-close-line nav__toggle-close"></i>
+      </div>
+    </div>
+
+    <!--=============== NAV MENU ===============-->
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+
+        <li id="li-login">
+          <a href="../login.html" class="nav__link" style=" font-size: medium">Log In</a>
+        </li>
+        <li id="li-signup">
+          <a href="../login.html" class="nav__link" style=" font-size: small">Sign Up</a>
+        </li>
+
+
+        <!--=============== Past Papers ===============-->
+        <li>
+          <a href="../pastpapers.html" class="nav__link" style=" font-size: medium">Past Papers</a>
+        </li>
+
+        <!--=============== Services ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-heart-3-line"></i>
+                </div>
+
+                <span class="dropdown__title">Most Viewed Past Papers</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="data-stru.html" class="dropdown__link">Data Structures (DS)</a>
+                  </li>
+                  <li>
+                    <a href="cal.html" class="dropdown__link">Calculus (Cal)</a>
+                  </li>
+                  <li>
+                    <a href="ta.html" class="dropdown__link">Theory of Automata (TOA)</a>
+                  </li>
+                  <li>
+                    <a href="coal.html" class="dropdown__link">Assembly Language (COAL)</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-newspaper-line"></i>
+                </div>
+
+                <span class="dropdown__title">News & Events</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">FDC X</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">SOFTEC '24</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">GDSC Hiring Candidates?</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Change in HoD</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-home-smile-line"></i>
+                </div>
+
+                <span class="dropdown__title">Accessibility</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../tt_gen.html" class="dropdown__link">Time Table Generator</a>
+                  </li>
+                  <li>
+                    <a href="../faculty.html" class="dropdown__link">Faculty Information</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">To Do List</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-file-paper-2-line"></i>
+                </div>
+
+                <span class="dropdown__title">Youtube Playlists</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Abdul Bari (Algorithms)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Neso Academy (DLD)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Code with Harry (PF)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Brain Molder (Database)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Calculators ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Calculators <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-table-line"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">Aggregate Calculator</a>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-number-4"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">GPA Calculator</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Forum ===============-->
+        <li>
+          <a href="#" class="nav__link" style=" font-size: medium">Forum</a>
+        </li>
+
+        <!--=============== Student Support ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Student Support
+            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-article-line"></i>
+                </div>
+
+                <span class="dropdown__title">Blogs</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Quantum Computing</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Psychology</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Data Science</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Sports</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Technology</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-answer-line"></i>
+                </div>
+
+                <span class="dropdown__title">Frequently Asked Questions</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">General Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Admission Related Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Finding Go-To Person</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Technical Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Others</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-line"></i>
+                </div>
+
+                <span class="dropdown__title">About Us</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">About How & Why!</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">About MultiDexters</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+
+    <div class="nav__actions">
+      <a class="navbar-login" href="/html/login.html" style="font-size: medium">Log In</a>
+      <a class="navbar-signup" href="/html/login.html" style="font-size: medium">Sign Up</a>
+
+    </div>
+
+
+  </nav>
+</header>
+
+
 <main>
     <div class="pp_container">
 
