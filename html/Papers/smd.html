@@ -5,18 +5,290 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMD</title>
-    <link rel="stylesheet" href="/html/Papers/papers.css">
+       <link rel="stylesheet" href="/assets/css/papers.css">
+     <!--=============== ICONS & SYMBOLS ===============-->
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+  <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3"></script>
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
 </head>
 
 <body>
+       <!--=============== NAVBAR ===============-->
+<header class="header">
+  <nav class="nav container">
+    <div class="nav__data">
+      <a href="#" class="nav__logo">
+        <i class="ri-code-s-slash-line"></i> Campus +
+      </a>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line nav__toggle-menu"></i>
+        <i class="ri-close-line nav__toggle-close"></i>
+      </div>
+    </div>
+
+    <!--=============== NAV MENU ===============-->
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+
+        <li id="li-login">
+          <a href="../login.html" class="nav__link" style=" font-size: medium">Log In</a>
+        </li>
+        <li id="li-signup">
+          <a href="../login.html" class="nav__link" style=" font-size: small">Sign Up</a>
+        </li>
 
 
-    <div class="container">
+        <!--=============== Past Papers ===============-->
+        <li>
+          <a href="../pastpapers.html" class="nav__link" style=" font-size: medium">Past Papers</a>
+        </li>
+
+        <!--=============== Services ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-heart-3-line"></i>
+                </div>
+
+                <span class="dropdown__title">Most Viewed Past Papers</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="data-stru.html" class="dropdown__link">Data Structures (DS)</a>
+                  </li>
+                  <li>
+                    <a href="cal.html" class="dropdown__link">Calculus (Cal)</a>
+                  </li>
+                  <li>
+                    <a href="ta.html" class="dropdown__link">Theory of Automata (TOA)</a>
+                  </li>
+                  <li>
+                    <a href="coal.html" class="dropdown__link">Assembly Language (COAL)</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-newspaper-line"></i>
+                </div>
+
+                <span class="dropdown__title">News & Events</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">FDC X</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">SOFTEC '24</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">GDSC Hiring Candidates?</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Change in HoD</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-home-smile-line"></i>
+                </div>
+
+                <span class="dropdown__title">Accessibility</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../tt_gen.html" class="dropdown__link">Time Table Generator</a>
+                  </li>
+                  <li>
+                    <a href="../faculty.html" class="dropdown__link">Faculty Information</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">To Do List</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-file-paper-2-line"></i>
+                </div>
+
+                <span class="dropdown__title">Youtube Playlists</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Abdul Bari (Algorithms)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Neso Academy (DLD)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Code with Harry (PF)</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Brain Molder (Database)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Calculators ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Calculators <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class="ri-table-line"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">Aggregate Calculator</a>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-number-4"></i>
+                </div>
+                <a href="/html/calculator.html" class="dropdown__title">GPA Calculator</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!--=============== Forum ===============-->
+        <li>
+          <a href="#" class="nav__link" style=" font-size: medium">Forum</a>
+        </li>
+
+        <!--=============== Student Support ===============-->
+        <li class="dropdown__item">
+          <div class="nav__link dropdown__button">
+            Student Support
+            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+
+          <div class="dropdown__container">
+            <div class="dropdown__content">
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-article-line"></i>
+                </div>
+
+                <span class="dropdown__title">Blogs</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">Quantum Computing</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Psychology</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Data Science</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Sports</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Technology</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-answer-line"></i>
+                </div>
+
+                <span class="dropdown__title">Frequently Asked Questions</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">General Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Admission Related Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Finding Go-To Person</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Technical Queries</a>
+                  </li>
+                  <li>
+                    <a href="../faq.html" class="dropdown__link">Others</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown__group">
+                <div class="dropdown__icon">
+                  <i class=" ri-question-line"></i>
+                </div>
+
+                <span class="dropdown__title">About Us</span>
+
+                <ul class="dropdown__list">
+                  <li>
+                    <a href="#" class="dropdown__link">About How & Why!</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">About MultiDexters</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown__link">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+
+    <div class="nav__actions">
+      <a class="navbar-login" href="/html/login.html" style="font-size: medium">Log In</a>
+      <a class="navbar-signup" href="/html/login.html" style="font-size: medium">Sign Up</a>
+
+    </div>
+
+
+  </nav>
+</header>
+
+
+    <main>
+
+
+    <div class="pp_container">
         
         <div class="section" id="course-outline">
             <h2>Course Outline</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1-gCWZ4D17dxP4wQasos1e2wnmr6y0K9p" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Course Outline </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1-gCWZ4D17dxP4wQasos1e2wnmr6y0K9p" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Course Outline </a></li>
             </ul>
         </div>
 
@@ -24,10 +296,10 @@
         <div class="section" id="past-papers">
             <h2>Final</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1pPkptrOZrY_lpBi6Tr4GTXRYtwSj6Yd5/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - Finals - Fall </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1jgh3lEzRcbKKNpKAIVIxuu5bx3YtSerG" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - Finals </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1NU7RMFtmeEB1FDYDO5OVXKc1rqrRZcfC" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - Finals </a></li>
-                <li><a href="https://drive.google.com/file/d/1n814PSmBYlFOgNO-zvUm3yoi-ffcKk0Q/view?usp=sharing"><span class="link-icon" target="_blank">🔗</span><span class="drive-icon">📁</span> 2024 - Finals - Spring </a></li>
+                <li><a href="https://drive.google.com/file/d/1pPkptrOZrY_lpBi6Tr4GTXRYtwSj6Yd5/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - Finals - Fall </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1jgh3lEzRcbKKNpKAIVIxuu5bx3YtSerG" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - Finals </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1NU7RMFtmeEB1FDYDO5OVXKc1rqrRZcfC" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - Finals </a></li>
+                <li><a href="https://drive.google.com/file/d/1n814PSmBYlFOgNO-zvUm3yoi-ffcKk0Q/view?usp=sharing"><span class="pp_link-icon" target="_blank">🔗</span><span class="drive-icon">📁</span> 2024 - Finals - Spring </a></li>
             </ul>
         </div> 
 
@@ -35,10 +307,10 @@
         <div class="section" id="past-papers">
             <h2>Mid 1</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1IxH_qfeFCFuDVuFL-mKHVWlFw0VC_GXL/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - MID-I - Fall </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1iAr4pw2-VX76W5iu7hIelcAxSH4oyS4i" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - MID-I </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1bhFtuJ-ok_rCquqkYMwRpA29FoPD2-D9" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2020 - MID-I </a></li>
-                <li><a href="https://drive.google.com/drive/folders/16hLMd_7vFHDRNKcxqk9roRc9A_1Y3S6V" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - MID-I </a></li>
+                <li><a href="https://drive.google.com/file/d/1IxH_qfeFCFuDVuFL-mKHVWlFw0VC_GXL/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - MID-I - Fall </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1iAr4pw2-VX76W5iu7hIelcAxSH4oyS4i" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - MID-I </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1bhFtuJ-ok_rCquqkYMwRpA29FoPD2-D9" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2020 - MID-I </a></li>
+                <li><a href="https://drive.google.com/drive/folders/16hLMd_7vFHDRNKcxqk9roRc9A_1Y3S6V" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - MID-I </a></li>
             </ul>
         </div>
 
@@ -46,10 +318,10 @@
         <div class="section" id="past-papers">
             <h2>Mid 2</h2>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1S3YwPjDwIGiYo_nlIDoGdWeUyorJ-taE/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - MID-II - Fall </a></li>
-                <li><a href="https://drive.google.com/drive/folders/1V4NExo1K95fMKDrS7FdyTMeonmWZlVHp" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - MID-II </a></li>
-                <li><a href="https://drive.google.com/drive/folders/10UuNQFH0c4g8-v6zTpYuIDpT9E3Nh24x" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - MID-II  </a></li>
-                <li><a href="https://drive.google.com/file/d/1iAgZqNpRbyg41oPTuWWINPZoI_rnoBSA/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> 2024 - MID-II - Spring </a></li>
+                <li><a href="https://drive.google.com/file/d/1S3YwPjDwIGiYo_nlIDoGdWeUyorJ-taE/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2018 - MID-II - Fall </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1V4NExo1K95fMKDrS7FdyTMeonmWZlVHp" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2019 - MID-II </a></li>
+                <li><a href="https://drive.google.com/drive/folders/10UuNQFH0c4g8-v6zTpYuIDpT9E3Nh24x" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2022 - MID-II  </a></li>
+                <li><a href="https://drive.google.com/file/d/1iAgZqNpRbyg41oPTuWWINPZoI_rnoBSA/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> 2024 - MID-II - Spring </a></li>
             </ul>
         </div>
 
@@ -57,11 +329,11 @@
         <div class="section" id="quizzes">
             <h2>Quizzes</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1uI8dqekA9V5ZPE8zd_y1avqF95rliufx" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-1 </a></li>
-                <li><a href="https://drive.google.com/file/d/12LbQoryw3iJy5ngllYH9mlfuB8IpWX8y/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-2 </a></li>
-                <li><a href="https://drive.google.com/file/d/1Uc1wkurOTbAPYs0xlSm4lscHXgECDYDT/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-3 </a></li>
-                <li><a href="https://drive.google.com/file/d/1-ehk8yZYF1kYLg2_g2Hs7-6U0nt4oZEv/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-4 </a></li>
-                <li><a href="https://drive.google.com/file/d/1nE8VjRs-QSRMsxmvaKhRhVkG1MDWJ8rs/view?usp=sharing" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-5  </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1uI8dqekA9V5ZPE8zd_y1avqF95rliufx" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-1 </a></li>
+                <li><a href="https://drive.google.com/file/d/12LbQoryw3iJy5ngllYH9mlfuB8IpWX8y/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-2 </a></li>
+                <li><a href="https://drive.google.com/file/d/1Uc1wkurOTbAPYs0xlSm4lscHXgECDYDT/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-3 </a></li>
+                <li><a href="https://drive.google.com/file/d/1-ehk8yZYF1kYLg2_g2Hs7-6U0nt4oZEv/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-4 </a></li>
+                <li><a href="https://drive.google.com/file/d/1nE8VjRs-QSRMsxmvaKhRhVkG1MDWJ8rs/view?usp=sharing" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Quiz-5  </a></li>
             </ul>
         </div>
 
@@ -70,7 +342,7 @@
         <div class="section" id="assignments">
             <h2>Assignments</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1xFMhc4p_DBXalZgNJTcLsWFcjrRoPAe9" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Assignments </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1xFMhc4p_DBXalZgNJTcLsWFcjrRoPAe9" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Assignments </a></li>
             </ul>
         </div>
         
@@ -84,10 +356,231 @@
         <div class="section" id="others">
             <h2>Others</h2>
             <ul>
-                <li><a href="https://drive.google.com/drive/folders/1LuOK1cLPxsZSjF4PXXasDE9WXd1OsLr2" target="_blank"><span class="link-icon">🔗</span><span class="drive-icon">📁</span> Word Files </a></li>
+                <li><a href="https://drive.google.com/drive/folders/1LuOK1cLPxsZSjF4PXXasDE9WXd1OsLr2" target="_blank"><span class="pp_link-icon">🔗</span><span class="drive-icon">📁</span> Word Files </a></li>
             </ul>
         </div>
     </div>
+    </main>
+     <!--=============== FOOTER ===============-->
+    <div class="footer-div">
+        <footer class="ct-footer">
+            <div class="footer-container">
+
+
+                <form name="contentForm" enctype="multipart/form-data" method="post" action="">
+                    <div class="ct-footer-pre text-center-lg">
+                        <div class="inner">
+                            <span>Join Campus Plus to receive updates, news &amp; events!</span>
+                        </div>
+                        <div class="inner">
+                            <div class="form-group">
+                                <input name="formfields[nl_email]" id="nl_email" class="validate[required]"
+                                    placeholder="Enter your email address" type="text" value=""> <label for="nl_email"
+                                    class="sr-only">Email Address</label> <button type="submit"
+                                    class="btn btn-motive">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+                <ul class="ct-footer-list text-center-sm">
+                    <li>
+                        <h2 class="ct-footer-list-header">
+                            Study Toolkit
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">FAST School of Computing</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">FAST School of Management</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Department of EE</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Department of CV</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Department of S & H</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="ct-footer-list-header">
+                            Services
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">Discussion Forum</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">GPA Calculator</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Aggregate Calculator</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Time Table Generator</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">To Do List</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="ct-footer-list-header">
+                            Blogs
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">Thought Leadership</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Webinars</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Events</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Sponsorships</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Advisors</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Training Program</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Activities &amp; Campaigns</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="ct-footer-list-header">
+                            Events & News
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">WebCorpCo Blog</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Hackathons</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Videos</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">News Releases</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Newsletters</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2 class="ct-footer-list-header">
+                            About
+                        </h2>
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">Student Support</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">MultiDexters</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <div class="ct-footer-meta text-center-sm">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2">
+                            <img alt="logo" src="/assets/footer-images/logo.webp">
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <address>
+                                <span>FAST NUCES<br></span>852-B Milaad Street<br>
+                                Lahore, 54770<br>
+                                <span>Phone: <a href="tel:5555555555"> (042) 111 128 128</a></span>
+                            </address>
+                        </div>
+                        <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+
+                        </div>
+                        <div class="col-sm-6 col-md-2 ct-u-paddingTop10">
+
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <ul class="ct-socials list-unstyled list-inline">
+                                <li>
+                                    <a href="" target="_blank" class="footer-a"><img alt="facebook"
+                                            src="/assets/footer-images/facebook-white.webp"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank" class="footer-a"><img alt="twitter"
+                                            src="/assets/footer-images/twitter-white.webp"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank" class="footer-a"><img alt="youtube"
+                                            src="/assets/footer-images/youtube-white.webp"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank" class="footer-a"><img alt="instagram"
+                                            src="/assets/footer-images/instagram-white.webp"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank" class="footer-a"><img alt="pinterest"
+                                            src="/assets/footer-images/pinterest-white.webp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ct-footer-post">
+                <div class="container">
+                    <div class="inner-left">
+                        <ul>
+                            <li>
+                                <a href="" class="footer-a">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">News</a>
+                            </li>
+                            <li>
+                                <a href="" class="footer-a">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-right">
+                        <p>
+                            Copyright © 2024 MultiDexters Inc.&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </footer>
+    </div>
+
+
+    <!--=============== ICONS ===============-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 
