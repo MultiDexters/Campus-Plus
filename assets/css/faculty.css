@@ -547,6 +547,29 @@ html {
     
 }
 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #075ebb;
+    color: white;
+    cursor: pointer;
+    padding:10px;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#myBtn:hover {
+    background-color: #014996; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Media Query for small devices (max-width: 600px) */
 @media screen and (max-width: 600px) {
     .nav__menu {
