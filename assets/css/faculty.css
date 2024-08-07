@@ -547,28 +547,56 @@ html {
     
 }
 
-#myBtn {
-    display: none;
+#myBtnContainer {
     position: fixed;
     bottom: 25px;
     right: 30px;
+    width: 60px;
+    height: 60px;
     z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myBtn {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
     border: none;
     outline: none;
-    background-color: #075ebb;
+    background-color: #075ebb; /* Professional blue color */
     color: white;
     cursor: pointer;
-    padding: 10px;
     border-radius: 50%;
-    font-size: 30px;
+    font-size: 24px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #myBtn:hover {
-    background-color: #014996; 
+    background-color: #014996; /* Darker blue on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+.progress-ring {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-90deg);
+    pointer-events: none; /* Prevents interaction with the ring */
+}
+
+.progress-ring__circle {
+    stroke: #014996;
+    stroke-dasharray: 0 100;
+    stroke-width: 6;
+    fill: transparent;
+    transition: stroke-dasharray 0.35s;
+}
+
+
 
 /* Media Query for small devices (max-width: 600px) */
 @media screen and (max-width: 600px) {
@@ -624,11 +652,7 @@ html {
     .nav__actions{
         margin-top: 4px;
     }
-    #myBtn{
-        font-size: 25px;
-        padding:0px 10px;
-        right: 15px;
-    }
+   
 }
 /* Media Query for tablets (min-width: 601px) and (max-width: 1024px) */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -670,11 +694,7 @@ html {
     .search-bar input {
         width: 70%;
     }
-    #myBtn{
-        font-size: 30px;
-        padding:0px 8px;
-        right: 15px;
-    }
+    
 }
 
 /* Media Query for devices (min-width: 1025px) and (max-width: 1800px) */
@@ -740,11 +760,7 @@ html {
         height: 4px;
         background-color: #004494;
     }
-    #myBtn{
-        font-size: 30px;
-        padding:0px 8px;
-        right: 15px;
-    }
+    
 }
 
 

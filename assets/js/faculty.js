@@ -67,26 +67,43 @@ function easeInOutQuad(t, b, c, d) {
     return -c / 2 * (t * (t - 2) - 1) + b;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    var myBtn = document.getElementById("myBtn");
+    var progressCircle = document.querySelector('.progress-ring__circle');
+    var radius = progressCircle.r.baseVal.value;
+    var circumference = 2 * Math.PI * radius;
 
-let mybutton = document.getElementById("myBtn");
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
 
-window.onscroll = function() {scrollFunction()};
+    function setProgress(percent) {
+        const offset = circumference - (percent / 100 * circumference);
+        progressCircle.style.strokeDashoffset = offset;
+    }
 
-function scrollFunction() {
-  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-myBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+    function updateProgress() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        setProgress(scrollPercent);
+    }
 
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            myBtn.style.display = "block";
+        } else {
+            myBtn.style.display = "none";
+        }
+        updateProgress();
+    };
+
+    myBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    updateProgress();
+});
+
 
 
 
