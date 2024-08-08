@@ -235,3 +235,40 @@ document.querySelector('.search-bar input').addEventListener('input', function (
     const searchText = this.value;
     filterItems(searchText);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var myBtn = document.getElementById("myBtn");
+    var progressCircle = document.querySelector('.progress-ring__circle');
+    var radius = progressCircle.r.baseVal.value;
+    var circumference = 2 * Math.PI * radius;
+
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    function setProgress(percent) {
+        const offset = circumference - (percent / 100 * circumference);
+        progressCircle.style.strokeDashoffset = offset;
+    }
+
+    function updateProgress() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        setProgress(scrollPercent);
+    }
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            myBtn.style.display = "block";
+        } else {
+            myBtn.style.display = "none";
+        }
+        updateProgress();
+    };
+
+    myBtn.onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    updateProgress();
+});
